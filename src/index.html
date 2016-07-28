@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <%= t.include("partials/_head.html") %>
+    <%= t.include("partials/_analytics_hearst.html") %>
+  </head>
+  <script>  var HDN = HDN || {}  </script>
+
+  <body>
+
+    <%= t.include("partials/_nav.html") %>
+    <responsive-child>
+
+      <div class="title-container">
+    		<div class="background-img story">
+    		    <div class="dim"></div>
+    			<div class="over-img">
+    				<p class="specialhead">Chronicle Investigation</p>
+    				<h1 class="title long">SF Marathon 2016</h1>
+    				<p class="author">By Author Author</a></p>
+    				<p class="date">Month DD, YYYY</p>
+    			</div>
+    		</div>
+    	</div>
+
+      <p class="caption landing">This is a caption. This is a caption.<span class="byline"> Person Person, Special to The Chronicle</span></p>
+
+
+      <div id="timing_lines" class="timing_lines"></div>
+
+      <div id="bubble-graph" class="bubble-graph"></div>
+
+      <div id="age-distribution" class="age-distribution"></div>
+
+      <div class="outer">
+        <div class="hed">A strong majority of runners are 29, but average pace is relatively constant through the decades</div>
+        <div class="chatter">The bars on the chart show the distribution of ages of SF marathon registered runners from 2010 through 2016. The superimposed line shows the average pace of all those runners.</div>
+        <div id="age-distribution-bars" class="age-distribution-bars"></div>
+        <div class="source">About the data: We are only including average paces for ages that include at least 30 runners. Note that datapoints with fewer averaged times have less accuracy.</div>
+      </div>
+
+      <div class="outer">
+        <div class="hed">How much does elevation impact finishing times?</div>
+        <div class="chatter"></div>
+        <div id="elevation-finish-bubbles" class="elevation-finish-bubbles"></div>
+        <div class="source">About the data: Races were chosen by awesomeness, as determined by Erin.</div>
+      </div>
+
+      <div class="max">
+        <hr>
+
+        <div class="credits">
+          <div class="entry">Reporter:  <br>Erin Allday &bull; <a href="mailto:eallday@sfchronicle.com">eallday@sfchronicle.com</a>  &bull; <a href = "https://twitter.com/erinallday" target="_blank">@erinallday</a></div>
+          <div class="entry">Interactive producer:  <br>Emma O'Neill  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a>
+        </div>
+
+        <hr>
+
+        <div class="dont-miss">
+          <div class="story">
+            <div class="padded">
+            <a href="http://projects.sfchronicle.com/2016/sea-level-rise/#part2" target="_blank">
+              <img src="./assets/social/dont-miss-sealevel2.jpg"></img>
+            </a>
+              <div class="small">Shoring up SF's edge</div>
+            </div>
+          </div>
+          <div class="story">
+            <div class="padded">
+            <a href="http://projects.sfchronicle.com/2016/visas/" target="_blank">
+              <img src="./assets/social/dont-miss-visas.png"></img>
+            </a>
+              <div class="small">H-1B visas: who gets them, where they go</div>
+            </div>
+          </div>
+          <div class="story">
+            <div class="padded">
+            <a href="http://projects.sfchronicle.com/2016/teacher-pay/" target="_blank">
+              <img src="./assets/social/dont-miss-teacherpay.jpg"></img>
+            </a>
+              <div class="small">Teachers struggle to stay in SF</div>
+            </div>
+          </div>
+          <div class="story">
+            <div class="padded">
+            <a href="http://projects.sfchronicle.com/2016/airbnb/" target="_blank">
+              <img src="./assets/social/dont-miss-airbnb.jpg"></img>
+            </a>
+              <div class="small">Airbnb and rivals thrive</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </responsive-child>
+
+    <script>
+      var splitsData = <%= JSON.stringify(csv.timingCSV) %>;
+      var bubbleData = <%= JSON.stringify(csv.scatter_plot_data) %>;
+      var ageData = <%= JSON.stringify(csv.ageHistogram) %>;
+      var barData = <%= JSON.stringify(csv.bars2016data) %>;
+      var raceCompData = <%= JSON.stringify(csv.raceComparisons) %>;
+    </script>
+
+    <%= t.include("partials/_footer.html") %>
+
+    <script src="app.js" async></script>
+    <%= t.include("partials/_helloSFC.html") %>
+
+  </body>
+</html>
