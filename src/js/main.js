@@ -867,8 +867,8 @@ var i = 0;
 
 // fills in HTML for year as years toggle
 var updateInfo = function(group) {
-  $(".legend-text").css("background","white");
-  $(".legend-text").css("color","#696969");
+  $(".legend-text-animated").css("background","white");
+  $(".legend-text-animated").css("color","#696969");
   $("#"+group+"woman").css("color","white");
   $("#"+group+"woman").css("background","#9E0A26");//"red");//"#004481");
   console.log("#"+group+"woman");
