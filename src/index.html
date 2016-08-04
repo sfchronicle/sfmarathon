@@ -21,34 +21,83 @@
     		    <div class="dim"></div>
     			<div class="over-img">
     				<p class="specialhead">Chronicle Investigation</p>
-    				<h1 class="title long">SF Marathon 2016</h1>
-    				<p class="author">By Author Author</a></p>
-    				<p class="date">Month DD, YYYY</p>
+    				<h1 class="title long">The SF Marathon by the numbers</h1>
+    				<p class="author">By Erin Allday and Emma O'Neill</a></p>
+    				<p class="date">August 5, 2016</p>
     			</div>
     		</div>
     	</div>
 
       <p class="caption landing">This is a caption. This is a caption.<span class="byline"> Person Person, Special to The Chronicle</span></p>
 
-
-      <div id="timing_lines" class="timing_lines"></div>
-
-      <div id="bubble-graph" class="bubble-graph"></div>
-
-      <div id="age-distribution" class="age-distribution"></div>
-
       <div class="outer">
-        <div class="hed">A strong majority of runners are 29, but average pace is relatively constant through the decades</div>
-        <div class="chatter">The bars on the chart show the distribution of ages of SF marathon registered runners from 2010 through 2016. The superimposed line shows the average pace of all those runners.</div>
+        <div class="hed">A strong majority of runners are 29, but average pace is relatively constant across ages</div>
+        <div class="chatter">The bars on the chart show the distribution of ages of SF marathon registered runners from 2010 through 2016. The superimposed line shows the average pace of all the runners of each age in 2016.</div>
+        <div class="legend">
+          <div class="bars-swath"><div class="legend-text">Total runners of an age (2010-2016)</div></div>
+          <div class="line-swath"><div class="legend-text">Pace of runners of an age (2016)</div></div>
+        </div>
         <div id="age-distribution-bars" class="age-distribution-bars"></div>
-        <div class="source">About the data: We are only including average paces for ages that include at least 30 runners. Note that datapoints with fewer averaged times have less accuracy.</div>
+        <div class="source">About the data: We are only including average paces for ages that include at least 50 runners in 2016 to retain accuracy.</div>
       </div>
 
       <div class="outer">
-        <div class="hed">How much does elevation impact finishing times?</div>
-        <div class="chatter"></div>
-        <div id="elevation-finish-bubbles" class="elevation-finish-bubbles"></div>
-        <div class="source">About the data: Races were chosen by awesomeness, as determined by Erin.</div>
+        <div class="hed">Average pace corresponds to the hill profile</div>
+        <div class="chatter">Most runners are at the mercy of the hills, the average pace varying by almost up to two minutes depending on the grade. Everyone gets tired at the end too, even though there are no hills.</div>
+        <div class="legend">
+          <div class="men-swath"><div class="legend-text">Average of male runners</div></div>
+          <div class="women-swath"><div class="legend-text">Average of female runners</div></div>
+          <div class="overall-swath"><div class="legend-text">Average of all runners</div></div>
+        </div>
+        <div id="pace-line-chart" class="pace-line-chart"></div>
+        <div class="source">About the data: Strava gave us this data, because Strava is awesome. Average paces are based on data from Strava users who uploaded their race data to the site, and pace is averaged on a per mile basis.</div>
+      </div>
+
+      <div class="outer">
+        <div class="hed">Runners spread out and slow down on the hills</div>
+        <div class="chatter">The fastest runners have a more consistent pace than other runners. As the race progresses, the runners spread out as some slow down more than others.</div>
+        <div id="timing-lines" class="timing-lines"></div>
+        <div class="source">About the data: Strava gave us this data, because Strava is awesome. Data is plotted for Strava users who uploaded their race data to the site.</div>
+      </div>
+
+      <div class="outer">
+        <div class="hed">The slower runners slow down more for the hills</div>
+        <div class="chatter">Here we're comparing the fastest Strava runner, the slowest Strava marathon runner, and the average Strava marathon runner, for men and women, on every hill on the course.</div>
+        <div class="bubble-options-slope" id="bubbleoptions-slope">
+          <div class="men-slope" id="men-slope">Males</div>
+          <div class="women-slope selected" id="women-slope">Females</div>
+        </div>
+        <div class="legend fastslow women" id="fastslowwomen">
+          <div class="fast"><div class="legend-text" id="Fastestwoman">Fastest runner</div></div>
+          <div class="avg"><div class="legend-text" id="Averagewoman">Average runner</div></div>
+          <div class="slow"><div class="legend-text" id="Slowestwoman">Slowest runner</div></div>
+        </div>
+        <div class="legend fastslow men" id="fastslowmen">
+          <div class="fast"><div class="legend-text" id="Fastestman">Fastest runner</div></div>
+          <div class="avg"><div class="legend-text"id="Averageman">Average runner</div></div>
+          <div class="slow"><div class="legend-text"id="Slowestman">Slowest runner</div></div>
+        </div>
+        <div id="elevation-bubble-graph" class="elevation-bubble-graph"></div>
+        <div class="source">About the data: Strava gave us this data, because Strava is awesome. Segments that were entirely up or down hills were inluded, and slope was computed by dividing the number of feet gained by the horizontal distance. (Or some other better way.)</div>
+      </div>
+
+      <div class="outer">
+        <div class="hed">Who are the runners at the SF marathon?</div>
+        <div class="chatter">Explore the make-up of the SF marathon by clicking to see who ran the marathon: ages, genders, homes, and speeds.</div>
+        <div class="bubble-options" id="bubbleoptions">
+          <div class="gender" id="gender">By gender</div>
+          <div class="origin" id="origin">By origin</div>
+        </div>
+        <div class="bubble-options" id="bubbleoptionsgender">
+          <div class="men" id="men">Males</div>
+          <div class="women" id="women">Females</div>
+        </div>
+        <div class="bubble-options" id="bubbleoptionsorigin">
+          <div class="foreign" id="foreign">Out-of-country runners</div>
+          <div class="sfrunners" id="sfrunners">SF runners</div>
+        </div>
+        <div id="bubble-graph" class="bubble-graph"></div>
+        <div class="source">About the data: Data is from the wonderful people at the SF marathon.</div>
       </div>
 
       <div class="max">
@@ -96,15 +145,19 @@
           </div>
         </div>
       </div>
+    </div>
 
     </responsive-child>
 
     <script>
-      var splitsData = <%= JSON.stringify(csv.timingCSV) %>;
-      var bubbleData = <%= JSON.stringify(csv.scatter_plot_data) %>;
-      var ageData = <%= JSON.stringify(csv.ageHistogram) %>;
+      // var splitsData = <%= JSON.stringify(csv.timingCSV) %>;
+      var bubbleData = <%= JSON.stringify(csv.scatter_plot_dataNEW) %>;
+      var ageData = <%= JSON.stringify(csv.ageHistogramNew) %>;
       var barData = <%= JSON.stringify(csv.bars2016data) %>;
-      var raceCompData = <%= JSON.stringify(csv.raceComparisons) %>;
+      var milePaceData = <%= JSON.stringify(csv.StravaAvgMiles) %>;
+      var elevationData = <%= JSON.stringify(csv.elevationProfile) %>;
+      var stravaSplitsData = <%= JSON.stringify(csv.allStravaSplits) %>;
+      var stravaBubbleData = <%= JSON.stringify(csv.elevationBubblesStrava) %>;
     </script>
 
     <%= t.include("partials/_footer.html") %>
