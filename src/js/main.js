@@ -1,3 +1,4 @@
+require("./lib/social");
 var d3 = require('d3');
 var $ = require("jquery");
 
@@ -1823,3 +1824,4 @@ function bubblechart() {
 //     return '#E89EAC';
 //   }
 // }
+
