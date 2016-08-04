@@ -31,21 +31,21 @@ function color_by_gender(gender) {
 
 function color_stravabubbles(d) {
   if (d.gender == "F") {
-    if (d.category == "Fastest") {
+    // if (d.category == "Fastest") {
       return "#9E0A26";
-    } else if (d.category == "Slowest") {
-      return "#FF708C";
-    } else {
-      return "#D13D59";
-    }
+    // } else if (d.category == "Slowest") {
+    //   return "#FF708C";
+    // } else {
+    //   return "#D13D59";
+    // }
   } else if (d.gender == "M"){
-    if (d.category == "Fastest") {
+    // if (d.category == "Fastest") {
       return "#004481";
-    } else if (d.category == "Slowest") {
-      return "#52AAE7";
-    } else {
-      return "#1F77B4";//"#D13D59";
-    }
+    // } else if (d.category == "Slowest") {
+    //   return "#52AAE7";
+    // } else {
+    //   return "#1F77B4";//"#D13D59";
+    // }
   }
 }
 
@@ -115,9 +115,9 @@ if (screen.width > 768) {
 } else if (screen.width <= 480) {
   var margin = {
     top: 15,
-    right: 15,
+    right: 45,
     bottom: 25,
-    left: 55
+    left: 40
   };
   var width = 310 - margin.left - margin.right;
   var height = 220 - margin.top - margin.bottom;
@@ -210,14 +210,25 @@ yvar.domain([0, d3.max(barData, function (d) {
 
 yRight.domain([parseTime('6:00'), parseTime('18:00')]);
 
-svgbars.append("text")
-    .attr("class", "y label")
-    .attr("text-anchor", "end")
-    .attr("y", 2)
-    .attr("dy", -70)
-    .attr("x", -60)
-    .attr("transform", "rotate(-90)")
-    .text("Count");
+if (screen.width <= 480) {
+  svgbars.append("text")
+      .attr("class", "y label")
+      .attr("text-anchor", "end")
+      .attr("y", 2)
+      .attr("dy", 20)
+      .attr("x", 0)
+      .attr("transform", "rotate(-90)")
+      .text("Count");
+} else {
+  svgbars.append("text")
+      .attr("class", "y label")
+      .attr("text-anchor", "end")
+      .attr("y", 2)
+      .attr("dy", -70)
+      .attr("x", -60)
+      .attr("transform", "rotate(-90)")
+      .text("Count");
+}
 
 svgbars.append("g")
     .attr("class", "x axis")
@@ -273,7 +284,7 @@ year.selectAll("rect")
       return height - yvar(d.value);
     })
     .style("fill", function (d) {
-      return color(d.name);
+      return "#4D769D";//color(d.name);
     });
 
 // adding in line for average pace for each age
@@ -332,18 +343,33 @@ function mouseoutbars(d) {
   focusbars.attr("transform", "translate(-100,-100)");
 }
 
-svgbars.append("g")
-  .attr("class", "y axis")
-  .call(yAxisRightBars)
-  .attr("transform", "translate(" + width + " ,0)")
-  .append("text")
-    .attr("class", "label")
-    .attr("transform", "rotate(-90)")
-    .attr("y", 60)
-    .attr("x", -10)
-    .attr("dy", ".71em")
-    .style("text-anchor", "end")
-    .text("Pace per mile")
+if (screen.width <= 480) {
+  svgbars.append("g")
+    .attr("class", "y axis")
+    .call(yAxisRightBars)
+    .attr("transform", "translate(" + width + " ,0)")
+    .append("text")
+      .attr("class", "label")
+      .attr("transform", "rotate(-90)")
+      .attr("y", -20)
+      .attr("x", 0)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Pace per mile")
+} else {
+  svgbars.append("g")
+    .attr("class", "y axis")
+    .call(yAxisRightBars)
+    .attr("transform", "translate(" + width + " ,0)")
+    .append("text")
+      .attr("class", "label")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 60)
+      .attr("x", -10)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Pace per mile")
+}
 
 svgbars.append("g")
     .attr("class", "x axis")
@@ -378,7 +404,7 @@ if (screen.width > 768) {
     top: 15,
     right: 15,
     bottom: 40,
-    left: 45
+    left: 40
   };
   var width = 310 - margin.left - margin.right;
   var height = 350 - margin.top - margin.bottom;
@@ -835,6 +861,8 @@ stravaBubbleData.forEach(function(d) {
 var womenStravaBubbleData = stravaBubbleData.filter(function(bubble) { return bubble.gender == "F" });
 var menStravaBubbleData = stravaBubbleData.filter(function(bubble) { return bubble.gender == "M" });
 var plotBubbleData = womenStravaBubbleData;
+var gender_toggle = "woman";
+var looping = true;
 
 $("#fastslowmen").hide();
 bubblechart_slope();
@@ -846,6 +874,11 @@ $("#men-slope").click(function(){
   plotBubbleData = menStravaBubbleData;
   $("#fastslowwomen").hide();
   $("#fastslowmen").show();
+  gender_toggle = "man";
+  // $(".start").addClass("selected");
+  // $(".pause").removeClass("selected");
+  // looping = true;
+  // tick();
 });
 
 $("#women-slope").click(function(){
@@ -855,6 +888,11 @@ $("#women-slope").click(function(){
   plotBubbleData = womenStravaBubbleData;
   $("#fastslowwomen").show();
   $("#fastslowmen").hide();
+  gender_toggle = "woman";
+  // $(".start").addClass("selected");
+  // $(".pause").removeClass("selected");
+  // looping = true;
+  // tick();
 });
 
 $("#bubbleoptions-slope").click(function(){
@@ -869,10 +907,28 @@ var i = 0;
 var updateInfo = function(group) {
   $(".legend-text-animated").css("background","white");
   $(".legend-text-animated").css("color","#696969");
-  $("#"+group+"woman").css("color","white");
-  $("#"+group+"woman").css("background","#9E0A26");//"red");//"#004481");
-  console.log("#"+group+"woman");
+  $("#"+group+gender_toggle).css("color","white");
+  if (gender_toggle == "man") {
+    $("#"+group+gender_toggle).css("background","#144C73");
+  } else {
+    $("#"+group+gender_toggle).css("background","#902237");
+  }
 };
+
+$(".start").click(function() {
+  if (looping) { return }
+  $(".start").addClass("selected");
+  $(".pause").removeClass("selected");
+  looping = true;
+  tick();
+})
+$(".pause").click(function() {
+  if (!looping) { return }
+  $(".start").removeClass("selected");
+  $(".pause").addClass("selected");
+  looping = false;
+  clearTimeout(loop);
+})
 
 var loop = null;
 var tick = function() {
@@ -881,6 +937,18 @@ var tick = function() {
   i = (i + 1) % groups.length;
   loop = setTimeout(tick, i == 0 ? 1700 : 1000);
 };
+
+// if user picks the year, we update the selected mode and stop looping
+$(".legend-text-animated").click(function(){
+  var selected_group = this.id;
+  var group = selected_group.substring(0,7);
+  $(".start").removeClass("selected");
+  $(".pause").addClass("selected");
+  looping = false;
+  clearTimeout(loop);
+  bubblechart_slope(group);
+  updateInfo(group);
+});
 
 tick();
 
@@ -897,9 +965,9 @@ function bubblechart_slope(group) {
   // setting sizes of interactive
   var margin = {
     top: 15,
-    right: 30,
+    right: 70,
     bottom: 40,
-    left: 30
+    left: 20
   };
   if (screen.width > 768) {
     var width = 800 - margin.left - margin.right;
@@ -999,35 +1067,6 @@ function bubblechart_slope(group) {
         return color_stravabubbles(d) || colors.fallback;
       })
       .append("text")
-  //     .on("mouseover", function(d) {
-  //         tooltip.html(`
-  //             <div>${d.category}</div>
-  //             <div>${d.segment}</div>
-  //             <div>Grade: <b>${d.slope}%</b></div>
-  //             <div>Pace: <b>${d.paceString}</b></div>
-  //         `);
-  //         tooltip.style("visibility", "visible");
-  //     })
-  //     .on("mousemove", function() {
-  //       if (screen.width <= 480) {
-  //         return tooltip
-  //           .style("top",(d3.event.pageY+40)+"px")//(d3.event.pageY+40)+"px")
-  //           .style("left",10+"px");
-  //       } else {
-  //         return tooltip
-  //           .style("top", (d3.event.pageY+20)+"px")
-  //           .style("left",(d3.event.pageX-80)+"px");
-  //       }
-  //     })
-  //     .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
-  //
-  // // show tooltip
-  // var tooltip = d3.select(".elevation-bubble-graph")
-  //     .append("div")
-  //     .attr("class","tooltip")
-  //     .style("position", "absolute")
-  //     .style("z-index", "10")
-  //     .style("visibility", "hidden")
 
   var node = svgSlope.selectAll(".circle")
       .data(plotData)
@@ -1035,18 +1074,38 @@ function bubblechart_slope(group) {
       .attr("class","node");
 
   node.append("text")
-      .attr("x", function(d) { return xSlope(d.pace)+10; })
-      .attr("y", function(d) { return ySlope(d.slope)})
+      .attr("x", function(d) {
+        if ((d.Segment).substring(0,3) == "GGP") {
+          return xSlope(d.pace)-60;
+        } else {
+          return xSlope(d.pace)+10;
+        }
+      })
+      .attr("y", function(d) {
+        if ((d.Segment).substring(0,3) == "GGP") {
+          return ySlope(d.slope)+5;
+        } else {
+          return ySlope(d.slope)
+        }
+      })
       .attr("class","dottextslope")
-      .style("fill","#696969")
-      .style("font-size","12px")
+      .style("fill","#3F3F3F")
+      .style("font-size","10px")
       .style("font-style","italic")
       .text(function(d) {
-          return d.Segment
+          return d.Segment;
       });
 
 
 }
+
+setTimeout( function(){
+    // Do something after 1 second
+    $(".start").removeClass("selected");
+    $(".pause").addClass("selected");
+    looping = false;
+    clearTimeout(loop);
+  }  , 60000 );
 
 
 //----------------------------------------------------------------------------------
