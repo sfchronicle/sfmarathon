@@ -14,7 +14,7 @@
 @dark-gray: #696969;
 @light-gray: #B2B2B2;
 @black: #191919;
-@dark-blue: #395272;
+@dark-blue: darken(#76899C,5%);//lighten(#395272,25%);
 @redlinks: #EC1C24;
 @white: #fff;
 @light-gray: #ccc;
@@ -661,21 +661,21 @@ text {
   border: 1px @dark-gray solid;
 }
 
-@bars: rgb(31, 119, 180);
+@bars: #4D769D;
 @line: #FFCC32;
-@men: rgb(31, 119, 180);
-@women: #D13D59;
-@overall: #FFCC32;
-@fast: #9E0A26;
-@avg: #D13D59;
-@slow: #FF708C;
-@fastmen: #004481;
-@avgmen: #1F77B4;
-@slowmen: #52AAE7;
-@gender: #996B7D;
-@origin: #61988E;
-@sfrunners: #1F77B4;//#E59FA6;//#9C8B9E;//#80A9D0;
-@foreign: #FFCC32;
+@men: #6790B7;//#6790B7;
+@women: #FFCC32;
+@overall: #EB8F6A;//#F79980;//#D13D59;
+// @fast: #9E0A26;
+// @avg: #D13D59;
+// @slow: #FF708C;
+// @fastmen: #004481;
+// @avgmen: #1F77B4;
+// @slowmen: #52AAE7;
+@gender: #996B7D;//#E59FA6;//#EB8F6A;
+@origin: lighten(#EB8F6A,10%);//lighten(#61988E,5%);//#61988E;
+@sfrunners: darken(#80A9D0,5%);//#1F77B4;//#E59FA6;//#9C8B9E;//#80A9D0;
+@foreign: #D13D59;
 @men-gray: #6C85A5;
 
 .legend {
@@ -691,11 +691,29 @@ text {
   }
   &.fastslow {
     width: 400px;
+    text-align: center;
+    @media @mobile {
+      width: 300px;
+      margin-bottom: 5px;
+    }
     border: 0;
+    &.women {
+      .legend-text-animated {
+        border: 1px @women solid;
+      }
+    }
+    &.men {
+      .legend-text-animated {
+        border: 1px @men solid;
+      }
+    }
   }
   .fast, .slow, .avg {
     display: inline-block;
     width: 120px;
+    @media @mobile {
+      width: 80px;
+    }
   }
   padding: 5px;
   .men-swath, .women-swath, .overall-swath, .line-swath, .bars-swath {
@@ -719,6 +737,8 @@ text {
     vertical-align: text-top;
   }
   .legend-text-animated {
+    margin: auto;
+    float:center;
     text-align: center;
     padding: 3px;
     border-radius: 3px;
@@ -779,6 +799,10 @@ text {
   .women, .women-slope {
     color: darken(@women,18%);
     border: darken(@women,18%) 1px solid;
+    margin-right: 10px;
+    @media @mobile {
+      margin-right: 5px;
+    }
     &.selected {
       color: white;
       background: darken(@women,18%);
@@ -862,13 +886,16 @@ text {
     border-radius: 4px;
     // background: @light-gray;
     @media @mobile {
-      width: 145px;
+      width: 140px;
       margin-bottom: 5px;
       font-size: 13px;
     }
   }
   text-align: center;
   margin-bottom: 10px;
+  @media @mobile {
+    margin-bottom: 0;
+  }
 }
 
 .displaynone {
@@ -878,10 +905,8 @@ text {
 }
 
 .controls {
-  padding-top: 10px;
   text-align: center;
   display: block;
-  // padding-left: 20px;
 }
 .start, .pause {
   border-radius: 7px;

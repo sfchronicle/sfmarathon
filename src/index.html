@@ -45,8 +45,8 @@
         <div class="hed">Average pace corresponds to the hill profile</div>
         <div class="chatter">Most runners are at the mercy of the hills, the average pace varying by almost up to two minutes depending on the grade. Everyone gets tired at the end too, even though there are no hills.</div>
         <div class="legend">
-          <div class="men-swath"><div class="legend-text">Average of male runners</div></div>
           <div class="women-swath"><div class="legend-text">Average of female runners</div></div>
+          <div class="men-swath"><div class="legend-text">Average of male runners</div></div>
           <div class="overall-swath"><div class="legend-text">Average of all runners</div></div>
         </div>
         <div id="pace-line-chart" class="pace-line-chart"></div>
@@ -64,8 +64,8 @@
         <div class="hed">The slower runners slow down more for the hills</div>
         <div class="chatter">Here we're comparing the fastest Strava runner, the slowest Strava marathon runner, and the average Strava marathon runner, for men and women, on every hill on the course.</div>
         <div class="bubble-options-slope" id="bubbleoptions-slope">
-          <div class="men-slope" id="men-slope">Males</div>
           <div class="women-slope selected" id="women-slope">Females</div>
+          <div class="men-slope" id="men-slope">Males</div>
         </div>
         <div class="legend fastslow women" id="fastslowwomen">
           <div class="fast"><div class="legend-text-animated" id="Fastestwoman">Fastest runner</div></div>
@@ -93,12 +93,12 @@
           <div class="origin" id="origin">By origin</div>
         </div>
         <div class="bubble-options" id="bubbleoptionsgender">
-          <div class="men" id="men">Males</div>
           <div class="women" id="women">Females</div>
+          <div class="men" id="men">Males</div>
         </div>
         <div class="bubble-options" id="bubbleoptionsorigin">
-          <div class="foreign" id="foreign">Out-of-country runners</div>
-          <div class="sfrunners" id="sfrunners">SF runners</div>
+          <div class="sfrunners" id="sfrunners">From SF</div>
+          <div class="foreign" id="foreign">Out-of-country</div>
         </div>
         <div id="bubble-graph" class="bubble-graph"></div>
         <div class="source">About the data: Data is from the wonderful people at the SF marathon. We do not include participants whose information was incomplete.</div>
@@ -109,7 +109,7 @@
 
         <div class="credits">
           <div class="entry">Reporter:  <br>Erin Allday &bull; <a href="mailto:eallday@sfchronicle.com">eallday@sfchronicle.com</a>  &bull; <a href = "https://twitter.com/erinallday" target="_blank">@erinallday</a></div>
-          <div class="entry">Interactive producer:  <br>Emma O'Neill  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a>
+          <div class="entry">Interactive producer:  <br>Emma O'Neill  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a></div>
         </div>
 
         <hr>
@@ -154,14 +154,14 @@
     </responsive-child>
 
     <script>
-      // var splitsData = <%= JSON.stringify(csv.timingCSV) %>;
+      var ageData = <%= JSON.stringify(csv.AgePaceHistogramData) %>;
       var bubbleData = <%= JSON.stringify(csv.scatter_plot_dataNEW) %>;
-      var ageData = <%= JSON.stringify(csv.ageHistogramNew) %>;
       var barData = <%= JSON.stringify(csv.bars2016data) %>;
       var milePaceData = <%= JSON.stringify(csv.StravaAvgMiles) %>;
       var elevationData = <%= JSON.stringify(csv.elevationProfile) %>;
       var stravaSplitsData = <%= JSON.stringify(csv.allStravaSplits) %>;
-      var stravaBubbleData = <%= JSON.stringify(csv.elevationBubblesStrava) %>;
+      var stravaBubbleData = <%= JSON.stringify(csv.elevationsBubblesStravaErin) %>;
+      console.log(stravaBubbleData);
     </script>
 
     <%= t.include("partials/_footer.html") %>

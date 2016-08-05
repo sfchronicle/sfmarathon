@@ -7,65 +7,53 @@ var formatthousands = d3.format("0,000");
 // Parse the date / time
 var parseTime = d3.time.format("%_M:%S").parse;
 
-var color = d3.scale.category10();
+// var color = d3.scale.category10();
 
 function color_by_group(group) {
   if (group == "Males") {
-    return "rgb(31, 119, 180)";//"#D13D59";
+    return "#6790B7";//"rgb(31, 119, 180)";//"#D13D59";
   } else if (group == "Females") {
-    return "#D13D59";//"#FFCC32";
+    return "#FFCC32";//"#D13D59";//"#FFCC32";
   } else if (group == "Overall"){
-    return "#FFCC32";//"#80A9D0";
+    return "#EB8F6A";//"#9C8B9E";//"#FFCC32";//"#80A9D0";
   }
 }
 
 function color_by_gender(gender) {
   if (gender == "M") {
-    return "rgb(31, 119, 180)";//"#80A9D0";
+    return "#6790B7";//"rgb(31, 119, 180)";//"#80A9D0";
   } else if (gender == "F") {
-    return "#D13D59";
+    return "#FFCC32";//"#D13D59";
   } else {
-    return "#FFCC32";
+    return "#EB8F6A";//"#FFCC32";
   }
 }
 
 function color_stravabubbles(d) {
   if (d.gender == "F") {
-    // if (d.category == "Fastest") {
-      return "#9E0A26";
-    // } else if (d.category == "Slowest") {
-    //   return "#FF708C";
-    // } else {
-    //   return "#D13D59";
-    // }
+    return "#FFCC32";//"#9E0A26";
   } else if (d.gender == "M"){
-    // if (d.category == "Fastest") {
-      return "#004481";
-    // } else if (d.category == "Slowest") {
-    //   return "#52AAE7";
-    // } else {
-    //   return "#1F77B4";//"#D13D59";
-    // }
+    return "#6790B7";//"#004481";
   }
 }
 
 function color_function(d) {
   if (d.city == "San Francisco") { // (d.country != "United States") || (d.country != "USA") || (
-    return "#1F77B4";//"#80A9D0";
+    return "#80A9D0";//"#D13D59";//"#80A9D0";
   } else if (d.country != "US") {
-    return "#FFCC32";
-  } else if (d.gender == "F") {
     return "#D13D59";
+  } else if (d.gender == "F") {
+    return "#FFCC32";
   } else if (d.gender == "M"){
-    return "#6C85A5";
+    return "#6790B7";
   }
 }
 
 function color_gender(d) {
   if (d.gender == "F") {
-    return "#D13D59";
+    return "#FFCC32";//"#D13D59";
   } else if (d.gender == "M"){
-    return "#6C85A5";
+    return "#6790B7";//"#6C85A5";
   } else {
     return "red";
   }
@@ -73,11 +61,11 @@ function color_gender(d) {
 
 function color_origin(d) {
   if (d.city == "San Francisco") { // (d.country != "United States") || (d.country != "USA") || (
-    return "#1F77B4";//#80A9D0";
+    return "#80A9D0";//#996B7D";//"#EB8F6A";//"#1F77B4";//#80A9D0";
   } else if (d.country != "US") {
-    return "#FFCC32";
+    return "#D13D59";//"#FFCC32";
   } else {
-    return "#9C8B9E";
+    return "#D8D8D8";//return "#996B7D";//"#EB8F6A";//"#61988E";//"#9C8B9E";
   }
 }
 
@@ -93,12 +81,12 @@ ageData.forEach(function(d,index){
 var bar_spacing = 0.1;
 
 // show tooltip
-var bar_tooltip = d3.select(".age-distribution-bars")
-    .append("div")
-    .attr("class","bar_tooltip")
-    .style("position", "absolute")
-    .style("z-index", "10")
-    .style("visibility", "hidden")
+// var bar_tooltip = d3.select(".age-distribution-bars")
+//     .append("div")
+//     .attr("class","bar_tooltip")
+//     .style("position", "absolute")
+//     .style("z-index", "10")
+//     .style("visibility", "hidden")
 
 var margin = {
   top: 15,
@@ -117,11 +105,22 @@ if (screen.width > 768) {
     top: 15,
     right: 45,
     bottom: 25,
-    left: 40
+    left: 45
   };
-  var width = 310 - margin.left - margin.right;
+  var width = 315 - margin.left - margin.right;
   var height = 220 - margin.top - margin.bottom;
+}
 
+if (screen.width <= 480) {
+  var xbarsoffset = 0;
+  var ybarsoffset = -20;
+  var xbarsoffsetleft = 0;
+  var dybarsoffsetleft = 20;
+} else {
+  var xbarsoffset = -10;
+  var ybarsoffset = 60;
+  var xbarsoffsetleft = -60;
+  var dybarsoffsetleft = -70;
 }
 
 // x-axis scale
@@ -210,25 +209,14 @@ yvar.domain([0, d3.max(barData, function (d) {
 
 yRight.domain([parseTime('6:00'), parseTime('18:00')]);
 
-if (screen.width <= 480) {
-  svgbars.append("text")
-      .attr("class", "y label")
-      .attr("text-anchor", "end")
-      .attr("y", 2)
-      .attr("dy", 20)
-      .attr("x", 0)
-      .attr("transform", "rotate(-90)")
-      .text("Count");
-} else {
-  svgbars.append("text")
-      .attr("class", "y label")
-      .attr("text-anchor", "end")
-      .attr("y", 2)
-      .attr("dy", -70)
-      .attr("x", -60)
-      .attr("transform", "rotate(-90)")
-      .text("Count");
-}
+svgbars.append("text")
+    .attr("class", "y label")
+    .attr("text-anchor", "end")
+    .attr("y", 2)
+    .attr("dy", dybarsoffsetleft)
+    .attr("x", xbarsoffsetleft)
+    .attr("transform", "rotate(-90)")
+    .text("Count");
 
 svgbars.append("g")
     .attr("class", "x axis")
@@ -246,28 +234,27 @@ var year = svgbars.selectAll(".age")
     .attr("class", "g")
     .attr("transform", function (d) {
       return "translate(" + xvar(d.Age) + ",0)";
-    })
-    .on("mouseover", function(d) {
-      bar_tooltip.html(`
-  				<div>Age: <b>${d.Age}</b></div>
-          <div>Count: <b>${formatthousands(d.Count)}</b></div>
-  		`);
-    	bar_tooltip.style("visibility", "visible");
-    })
-    .on("mousemove", function() {
-    	if (screen.width <= 480) {
-    		return bar_tooltip
-    			.style("top", (d3.event.pageY+20)+"px")
-    			.style("left",10+"px");
-    	} else {
-    		return bar_tooltip
-    			.style("top", (d3.event.pageY+20)+"px")
-    			.style("left",(d3.event.pageX-80)+"px");
-    	}
-    })
-    .on("mouseout", function(){return bar_tooltip.style("visibility", "hidden");});
+    });
+    // .on("mouseover", function(d) {
+    //   bar_tooltip.html(`
+  	// 			<div>Age: <b>${d.Age}</b></div>
+    //       <div>Count: <b>${formatthousands(d.Count)}</b></div>
+  	// 	`);
+    // 	bar_tooltip.style("visibility", "visible");
+    // })
+    // .on("mousemove", function() {
+    // 	if (screen.width <= 480) {
+    // 		return bar_tooltip
+    // 			.style("top", (d3.event.pageY+20)+"px")
+    // 			.style("left",10+"px");
+    // 	} else {
+    // 		return bar_tooltip
+    // 			.style("top", (d3.event.pageY+20)+"px")
+    // 			.style("left",(d3.event.pageX-80)+"px");
+    // 	}
+    // })
+    // .on("mouseout", function(){return bar_tooltip.style("visibility", "hidden");});
 
-//
 year.selectAll("rect")
     .data(function (d) {
       return d.types;
@@ -307,9 +294,16 @@ focusbars.append("rect")
     .attr("opacity","0.6")
     .attr("fill","white");
 
-focusbars.append("text")
-    .attr("x", -100)
-    .attr("y", -10);
+if (screen.width <= 480) {
+  focusbars.append("text")
+      .attr("x", -80)
+      .attr("y", -10);
+} else {
+  focusbars.append("text")
+      .attr("x", -100)
+      .attr("y", -10);
+}
+
 
 var voronoiGroupBars = svgbars.append("g")
     .attr("class", "voronoipath");
@@ -330,8 +324,6 @@ voronoiGroupBars.selectAll(".voronoipath")
   .on("mouseover", mouseoverbars)
   .on("mouseout", mouseoutbars);
 
-// console.log(voronoiGroup);
-
 function mouseoverbars(d) {
   d3.select("."+d.key).classed("line-hover", true);
   focusbars.attr("transform", "translate(" + xvar(d.age) + "," + yRight(d.pace) + ")");
@@ -343,33 +335,18 @@ function mouseoutbars(d) {
   focusbars.attr("transform", "translate(-100,-100)");
 }
 
-if (screen.width <= 480) {
-  svgbars.append("g")
-    .attr("class", "y axis")
-    .call(yAxisRightBars)
-    .attr("transform", "translate(" + width + " ,0)")
-    .append("text")
-      .attr("class", "label")
-      .attr("transform", "rotate(-90)")
-      .attr("y", -20)
-      .attr("x", 0)
-      .attr("dy", ".71em")
-      .style("text-anchor", "end")
-      .text("Pace per mile")
-} else {
-  svgbars.append("g")
-    .attr("class", "y axis")
-    .call(yAxisRightBars)
-    .attr("transform", "translate(" + width + " ,0)")
-    .append("text")
-      .attr("class", "label")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 60)
-      .attr("x", -10)
-      .attr("dy", ".71em")
-      .style("text-anchor", "end")
-      .text("Pace per mile")
-}
+svgbars.append("g")
+  .attr("class", "y axis")
+  .call(yAxisRightBars)
+  .attr("transform", "translate(" + width + " ,0)")
+  .append("text")
+    .attr("class", "label")
+    .attr("transform", "rotate(-90)")
+    .attr("y", ybarsoffset)
+    .attr("x", xbarsoffset)
+    .attr("dy", ".71em")
+    .style("text-anchor", "end")
+    .text("Pace per mile")
 
 svgbars.append("g")
     .attr("class", "x axis")
@@ -402,7 +379,7 @@ if (screen.width > 768) {
 } else if (screen.width <= 480) {
   var margin = {
     top: 15,
-    right: 15,
+    right: 45,
     bottom: 40,
     left: 40
   };
@@ -579,12 +556,26 @@ if (screen.width <= 480) {
       .append("text")
       .attr("class", "label")
       .attr("transform", "rotate(-90)")
-      .attr("y", -45)
-      .attr("x", -10)
+      .attr("y", 10)
+      .attr("x", 0)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
       // .style("fill","white")
       .text("Pace per mile")
+
+  svgMilePace.append("g")
+    .attr("class", "y axis")
+    .call(yAxisRightMilePace)
+    .attr("transform", "translate(" + width + " ,0)")
+    .append("text")
+      .attr("class", "label")
+      .attr("transform", "rotate(-90)")
+      .attr("y", -20)
+      .attr("x", 0)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Elevation (ft)")
+
 } else {
   svgMilePace.append("g")
     .attr("class", "y axis")
@@ -634,7 +625,7 @@ if (screen.width > 768) {
 } else if (screen.width <= 480) {
   var margin = {
     top: 15,
-    right: 15,
+    right: 45,
     bottom: 40,
     left: 45
   };
@@ -724,20 +715,22 @@ var focusAllStrava = svgTimingLines.append("g")
     .attr("transform", "translate(-100,-100)")
     .attr("class", "focus");
 
-focusAllStrava.append("circle")
-    .attr("r", 3.5);
+if (screen.width >= 480) {
+  focusAllStrava.append("circle")
+      .attr("r", 3.5);
 
-focusAllStrava.append("rect")
-    .attr("x",-110)
-    .attr("y",-25)
-    .attr("width","170px")
-    .attr("height","20px")
-    .attr("opacity","0.5")
-    .attr("fill","white");
+  focusAllStrava.append("rect")
+      .attr("x",-110)
+      .attr("y",-25)
+      .attr("width","170px")
+      .attr("height","20px")
+      .attr("opacity","0.5")
+      .attr("fill","white");
 
-focusAllStrava.append("text")
-    .attr("x", -100)
-    .attr("y", -10);
+  focusAllStrava.append("text")
+      .attr("x", -100)
+      .attr("y", -10);
+}
 
 var voronoiGroupAllStrava = svgTimingLines.append("g")
     .attr("class", "voronoi");
@@ -767,11 +760,13 @@ voronoiGroupAllStrava.selectAll(".voronoi")
 
 function mouseoverAllStrava(d) {
   d3.select(".id"+d.key).classed("line-hover", true);
-  focusAllStrava.attr("transform", "translate(" + xAllStrava(d.mile) + "," + yAllStrava(d.pace) + ")");
-  if (d.gender){
-    focusAllStrava.select("text").text("Mile: "+d.mile+", Pace: "+d.paceText+" ("+d.gender+")");
-  } else {
-    focusAllStrava.select("text").text("Mile: "+d.mile+", Pace: "+d.paceText);
+  if (screen.width >= 480) {
+    focusAllStrava.attr("transform", "translate(" + xAllStrava(d.mile) + "," + yAllStrava(d.pace) + ")");
+    if (d.gender){
+      focusAllStrava.select("text").text("Mile: "+d.mile+", Pace: "+d.paceText+" ("+d.gender+")");
+    } else {
+      focusAllStrava.select("text").text("Mile: "+d.mile+", Pace: "+d.paceText);
+    }
   }
 }
 
@@ -811,12 +806,24 @@ if (screen.width <= 480) {
       .append("text")
       .attr("class", "label")
       .attr("transform", "rotate(-90)")
-      .attr("y", -45)
-      .attr("x", -10)
+      .attr("y", 10)
+      .attr("x", 0)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
       // .style("fill","white")
       .text("Pace per mile")
+  svgTimingLines.append("g")
+    .attr("class", "y axis")
+    .call(yAxisRightAllStrava)
+    .attr("transform", "translate(" + width + " ,0)")
+    .append("text")
+      .attr("class", "label")
+      .attr("transform", "rotate(-90)")
+      .attr("y", -20)
+      .attr("x", 0)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Elevation (ft)")
 } else {
   svgTimingLines.append("g")
       .attr("class", "y axis")
@@ -875,10 +882,8 @@ $("#men-slope").click(function(){
   $("#fastslowwomen").hide();
   $("#fastslowmen").show();
   gender_toggle = "man";
-  // $(".start").addClass("selected");
-  // $(".pause").removeClass("selected");
-  // looping = true;
-  // tick();
+  bubblechart_slope("Fastest");
+  updateInfo("Fastest");
 });
 
 $("#women-slope").click(function(){
@@ -889,14 +894,8 @@ $("#women-slope").click(function(){
   $("#fastslowwomen").show();
   $("#fastslowmen").hide();
   gender_toggle = "woman";
-  // $(".start").addClass("selected");
-  // $(".pause").removeClass("selected");
-  // looping = true;
-  // tick();
-});
-
-$("#bubbleoptions-slope").click(function(){
-  bubblechart_slope();
+  bubblechart_slope("Fastest");
+  updateInfo("Fastest");
 });
 
 var groups = ["Fastest","Average","Slowest"];
@@ -909,9 +908,9 @@ var updateInfo = function(group) {
   $(".legend-text-animated").css("color","#696969");
   $("#"+group+gender_toggle).css("color","white");
   if (gender_toggle == "man") {
-    $("#"+group+gender_toggle).css("background","#144C73");
+    $("#"+group+gender_toggle).css("background","#4E779E");
   } else {
-    $("#"+group+gender_toggle).css("background","#902237");
+    $("#"+group+gender_toggle).css("background","#E6B319");
   }
 };
 
@@ -967,7 +966,7 @@ function bubblechart_slope(group) {
     top: 15,
     right: 70,
     bottom: 40,
-    left: 20
+    left: 30
   };
   if (screen.width > 768) {
     var width = 800 - margin.left - margin.right;
@@ -986,21 +985,49 @@ function bubblechart_slope(group) {
     var height = 350 - margin.top - margin.bottom;
   }
 
-  // x-axis scale
-  var xSlope = d3.time.scale()
-  .range([0, width]);
+  if (screen.width <= 480) {
 
-  var ySlope = d3.scale.linear()
-      .rangeRound([height, 0]);
+    // x-axis scale
+    var xSlope = d3.scale.linear()
+      .rangeRound([0, width]);
 
-  // use x-axis scale to set x-axis
-  var xAxisSlope = d3.svg.axis()
-      .scale(xSlope)
-      .orient("bottom")
-      .tickFormat(d3.time.format("%_M:%S"));
+    var ySlope = d3.time.scale()
+        .range([height, 0]);
 
-  var yAxisSlope = d3.svg.axis().scale(ySlope)
-      .orient("left");
+    // use x-axis scale to set x-axis
+    var xAxisSlope = d3.svg.axis()
+        .scale(xSlope)
+        .orient("bottom");
+
+    var yAxisSlope = d3.svg.axis().scale(ySlope)
+        .orient("left")
+        .tickFormat(d3.time.format("%_M:%S"));
+
+    xSlope.domain([-8,8]);
+    ySlope.domain([parseTime('4:00'), parseTime('18:00')]);
+
+  } else {
+
+    // x-axis scale
+    var xSlope = d3.time.scale()
+    .range([0, width]);
+
+    var ySlope = d3.scale.linear()
+        .rangeRound([height, 0]);
+
+    // use x-axis scale to set x-axis
+    var xAxisSlope = d3.svg.axis()
+        .scale(xSlope)
+        .orient("bottom")
+        .tickFormat(d3.time.format("%_M:%S"));
+
+    var yAxisSlope = d3.svg.axis().scale(ySlope)
+        .orient("left");
+
+    xSlope.domain([parseTime('4:00'), parseTime('18:00')]);
+    ySlope.domain([-8,8]);
+
+  }
 
   // create SVG container for chart components
   var svgSlope = d3.select(".elevation-bubble-graph").append("svg")
@@ -1009,94 +1036,169 @@ function bubblechart_slope(group) {
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  xSlope.domain([parseTime('4:00'), parseTime('18:00')]);
-  ySlope.domain([-10,10]);
-
-  svgSlope.append("g")
-    .append("line")
-      .attr("stroke","#B2B2B2")
-      .attr("x1",0)
-      .attr("y1",(height/2+1))
-      .attr("x2",width)
-      .attr("y2",height/2);
-
-  svgSlope.append("g")
-      .attr("class", "x axis displaynone")
-      .attr("transform", "translate(0," + height + ")")
-      .call(xAxisSlope)
-      .append("text")
-      .attr("class", "label")
-      .attr("x", width-10)
-      .attr("y", -10)
-      .style("text-anchor", "end")
-      .text("Pace per mile");
-
-  svgSlope.append("g")
-      .attr("class", "y axis")
-      .call(yAxisSlope)
-      .append("text")
-        .attr("class", "label")
-        .attr("transform", "rotate(-90)")
-        .attr("x", -10)
-        .attr("y", 20)
-        .attr("dy", ".71em")
-        .style("text-anchor", "end")
-        .text("+ Grade (%)")
+  if (screen.width <= 480) {
+    svgSlope.append("g")
+      .append("line")
+        .attr("stroke","#B2B2B2")
+        .attr("x1",width/2+1)
+        .attr("y1",0)
+        .attr("x2",width/2+1)
+        .attr("y2",height);
 
     svgSlope.append("g")
-      .append("text")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxisSlope)
+        .append("text")
         .attr("class", "label")
-        .attr("transform", "rotate(-90)")
-        .attr("x", -150)
-        .attr("y", 20)
-        .attr("dy", ".71em")
+        .attr("x", 80)
+        .attr("y", -10)
         .style("text-anchor", "end")
-        .text("- Grade (%)")
+        .text("- Grade (%)");
+
+    svgSlope.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxisSlope)
+        .append("text")
+        .attr("class", "label")
+        .attr("x", width-10)
+        .attr("y", -10)
+        .style("text-anchor", "end")
+        .text("+ Grade (%)");
+
+    svgSlope.append("g")
+        .attr("class", "y axis displaynone")
+        .call(yAxisSlope)
+        .append("text")
+          .attr("class", "label")
+          .attr("transform", "rotate(-90)")
+          .attr("x", 0)
+          .attr("y", 10)
+          .attr("dy", ".71em")
+          .style("text-anchor", "end")
+          .text("Pace per mile")
+
+  } else {
+    svgSlope.append("g")
+      .append("line")
+        .attr("stroke","#B2B2B2")
+        .attr("x1",0)
+        .attr("y1",(height/2+1))
+        .attr("x2",width)
+        .attr("y2",height/2);
+
+    svgSlope.append("g")
+        .attr("class", "x axis displaynone")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxisSlope)
+        .append("text")
+        .attr("class", "label")
+        .attr("x", width-10)
+        .attr("y", -10)
+        .style("text-anchor", "end")
+        .text("Pace per mile");
+
+    svgSlope.append("g")
+        .attr("class", "y axis")
+        .call(yAxisSlope)
+        .append("text")
+          .attr("class", "label")
+          .attr("transform", "rotate(-90)")
+          .attr("x", -10)
+          .attr("y", 20)
+          .attr("dy", ".71em")
+          .style("text-anchor", "end")
+          .text("+ Grade (%)")
+
+      svgSlope.append("g")
+        .append("text")
+          .attr("class", "label")
+          .attr("transform", "rotate(-90)")
+          .attr("x", -150)
+          .attr("y", 20)
+          .attr("dy", ".71em")
+          .style("text-anchor", "end")
+          .text("- Grade (%)")
+  }
 
   // color in the dots
-  svgSlope.selectAll(".dot")
-      .data(plotData)
-      .enter().append("circle")
-      .attr("r", function(d) {
-        return 10;
-      })
-      .attr("cx", function(d) { return xSlope(d.pace); })
-      .attr("cy", function(d) { return ySlope(d.slope); })
-      .attr("opacity","0.6")
-      .style("fill", function(d) {
-        return color_stravabubbles(d) || colors.fallback;
-      })
-      .append("text")
+  if (screen.width <= 480){
+    svgSlope.selectAll(".dot")
+        .data(plotData)
+        .enter().append("circle")
+        .attr("r", function(d) {
+          return 10;
+        })
+        .attr("cx", function(d) { return xSlope(d.slope); })
+        .attr("cy", function(d) { return ySlope(d.pace); })
+        .attr("opacity","0.6")
+        .style("fill", function(d) {
+          return color_stravabubbles(d) || colors.fallback;
+        })
+        .append("text")
+  } else {
+    svgSlope.selectAll(".dot")
+        .data(plotData)
+        .enter().append("circle")
+        .attr("r", function(d) {
+          return 10;
+        })
+        .attr("cx", function(d) { return xSlope(d.pace); })
+        .attr("cy", function(d) { return ySlope(d.slope); })
+        .attr("opacity","0.6")
+        .style("fill", function(d) {
+          return color_stravabubbles(d) || colors.fallback;
+        })
+        .append("text")
+  }
 
-  var node = svgSlope.selectAll(".circle")
+  var nodeslope = svgSlope.selectAll(".circle")
       .data(plotData)
       .enter().append("g")
       .attr("class","node");
 
-  node.append("text")
-      .attr("x", function(d) {
-        if ((d.Segment).substring(0,3) == "GGP") {
-          return xSlope(d.pace)-60;
-        } else {
-          return xSlope(d.pace)+10;
-        }
-      })
-      .attr("y", function(d) {
-        if ((d.Segment).substring(0,3) == "GGP") {
-          return ySlope(d.slope)+5;
-        } else {
-          return ySlope(d.slope)
-        }
-      })
-      .attr("class","dottextslope")
-      .style("fill","#3F3F3F")
-      .style("font-size","10px")
-      .style("font-style","italic")
-      .text(function(d) {
-          return d.Segment;
-      });
-
-
+  if (screen.width <= 480) {
+    nodeslope.append("text")
+        .attr("x", function(d) {
+          return xSlope(d.slope);
+        })
+        .attr("y", function(d) {
+          return ySlope(d.pace)
+        })
+        .attr("class","dottextslope")
+        .style("fill","#3F3F3F")
+        .style("font-size","10px")
+        .style("font-style","italic")
+        // .attr("transform", "rotate(-90)")
+        // .attr("transform", function(d) {"translate("+xSlope(d.slope)/2+","+xSlope(d.slope)/2+") rotate(90)"})
+        .text(function(d) {
+            return d.Segment;
+        });
+  } else {
+    nodeslope.append("text")
+        .attr("x", function(d) {
+          if ((d.Segment).substring(0,3) == "GGP") {
+            return xSlope(d.pace)-60;
+          } else {
+            return xSlope(d.pace)+10;
+          }
+        })
+        .attr("y", function(d) {
+          if ((d.Segment).substring(0,3) == "GGP") {
+            return ySlope(d.slope)+5;
+          } else {
+            return ySlope(d.slope)
+          }
+        })
+        .attr("class","dottextslope")
+        .style("fill","#3F3F3F")
+        .style("font-size","10px")
+        .style("font-style","italic")
+        .text(function(d) {
+            return d.Segment;
+        });
+  }
 }
 
 setTimeout( function(){
@@ -1232,6 +1334,7 @@ function bubblechart() {
     bottom: 40,
     left: 100
   };
+  var bubble_rad = 5;
   if (screen.width > 768) {
     var width = 900 - margin.left - margin.right;
     var height = 700 - margin.top - margin.bottom;
@@ -1247,6 +1350,7 @@ function bubblechart() {
     };
     var width = 310 - margin.left - margin.right;
     var height = 350 - margin.top - margin.bottom;
+    var bubble_rad = 2;
   }
 
   // x-axis scale
@@ -1303,9 +1407,7 @@ function bubblechart() {
     svg.selectAll(".dot")
         .data(plotData)
         .enter().append("circle")
-        .attr("r", function(d) {
-          return 5;
-        })
+        .attr("r", function(d) { return bubble_rad; })
         .attr("cx", function(d) { return x(d.age); })
         .attr("cy", function(d) { return y(d.pace); })
         .attr("opacity","0.4")
@@ -1339,9 +1441,7 @@ function bubblechart() {
     svg.selectAll(".dot")
         .data(plotData)
         .enter().append("circle")
-        .attr("r", function(d) {
-          return 5;
-        })
+        .attr("r", function(d) { return bubble_rad; })
         .attr("cx", function(d) { return x(d.age); })
         .attr("cy", function(d) { return y(d.pace); })
         .attr("opacity","0.4")
@@ -1375,9 +1475,7 @@ function bubblechart() {
     svg.selectAll(".dot")
         .data(plotData)
         .enter().append("circle")
-        .attr("r", function(d) {
-          return 5;
-        })
+        .attr("r", function(d) {return bubble_rad;})
         .attr("cx", function(d) { return x(d.age); })
         .attr("cy", function(d) { return y(d.pace); })
         .attr("opacity","0.4")
