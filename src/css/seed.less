@@ -229,12 +229,17 @@ footer {
 }
 
 .title {
-  font-family: @body-bold;
+  font-family: @body;
   font-size: 60px;
   padding: 0 10px;
   text-align: center;
   margin: 10px auto 0;
   max-width: 835px;
+
+  &.deck {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
 
   &.long {
     font-size: 50px;
@@ -254,7 +259,7 @@ footer {
 
 .over-img {
   position: absolute;
-  bottom: 160px;
+  bottom: 90px;
   z-index: 2;
   color: white;
   left: 0;
