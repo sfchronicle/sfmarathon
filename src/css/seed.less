@@ -147,6 +147,7 @@ li {
   clear: left;
   padding-top: 10px;
   font-size: 12px;
+  text-align: left;
   // color: @white;
   font-style: italic;
   font-family: @block-graphics;
@@ -936,5 +937,29 @@ text {
     color: @black;
     cursor: default;
     background: @dark-blue;
+  }
+}
+
+#map {
+  width: 43.5%;
+  float: left;
+  margin: 0 auto;
+
+  @media @tablet {
+    width: 80%;
+    clear: both;
+    float: none;
+  }
+}
+
+#table {
+  width: 56.5%;
+  float: left;
+  margin: 0 auto;
+
+  @media @tablet {
+    width: 80%;
+    clear: both;
+    float: none;
   }
 }
