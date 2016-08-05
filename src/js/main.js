@@ -1445,13 +1445,24 @@ function bubblechart() {
           return color_gender(d) || colors.fallback;
         })
         .on("mouseover", function(d) {
-            tooltip.html(`
-                <div>Age: <b>${d.age}</b></div>
-                <div>Gender: <b>${d.gender}</b></div>
-                <div>Average pace: <b>${d.avgPace} min/mi</b></div>
-                <div>City: <b>${d.city}</b></div>
-                <div>Country: <b>${d.country}</b></div>
-            `);
+            if (d.country == "US") {
+              tooltip.html(`
+                  <div>Age: <b>${d.age}</b></div>
+                  <div>Gender: <b>${d.gender}</b></div>
+                  <div>Average pace: <b>${d.avgPace} min/mi</b></div>
+                  <div>City: <b>${d.city}, ${d.state}</b></div>
+                  <div>Country: <b>${d.country}</b></div>
+              `);
+            }
+            else {
+              tooltip.html(`
+                  <div>Age: <b>${d.age}</b></div>
+                  <div>Gender: <b>${d.gender}</b></div>
+                  <div>Average pace: <b>${d.avgPace} min/mi</b></div>
+                  <div>City: <b>${d.city}</b></div>
+                  <div>Country: <b>${d.country}</b></div>
+              `);
+            }
             tooltip.style("visibility", "visible");
         })
         .on("mousemove", function() {
@@ -1479,13 +1490,69 @@ function bubblechart() {
           return color_origin(d) || colors.fallback;
         })
         .on("mouseover", function(d) {
-            tooltip.html(`
-                <div>Age: <b>${d.age}</b></div>
-                <div>Gender: <b>${d.gender}</b></div>
-                <div>Average pace: <b>${d.avgPace} min/mi</b></div>
-                <div>City: <b>${d.city}</b></div>
-                <div>Country: <b>${d.country}</b></div>
-            `);
+            if (d.country == "US") {
+              tooltip.html(`
+                  <div>Age: <b>${d.age}</b></div>
+                  <div>Gender: <b>${d.gender}</b></div>
+                  <div>Average pace: <b>${d.avgPace} min/mi</b></div>
+                  <div>City: <b>${d.city}, ${d.state}</b></div>
+                  <div>Country: <b>${d.country}</b></div>
+              `);
+            }
+            else {
+              tooltip.html(`
+                  <div>Age: <b>${d.age}</b></div>
+                  <div>Gender: <b>${d.gender}</b></div>
+                  <div>Average pace: <b>${d.avgPace} min/mi</b></div>
+                  <div>City: <b>${d.city}</b></div>
+                  <div>Country: <b>${d.country}</b></div>
+              `);
+            }
+            tooltip.style("visibility", "visible");
+        })
+        .on("mousemove", function() {
+          if (screen.width <= 480) {
+            return tooltip
+              .style("top",(d3.event.pageY+40)+"px")//(d3.event.pageY+40)+"px")
+              .style("left",10+"px");
+          } else {
+            return tooltip
+              .style("top", (d3.event.pageY+20)+"px")
+              .style("left",(d3.event.pageX-80)+"px");
+          }
+        })
+        .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
+  } else {
+    // color in the dots
+    svg.selectAll(".dot")
+        .data(plotData)
+        .enter().append("circle")
+        .attr("r", function(d) {return bubble_rad;})
+        .attr("cx", function(d) { return x(d.age); })
+        .attr("cy", function(d) { return y(d.pace); })
+        .attr("opacity","0.4")
+        .style("fill", function(d) {
+          return color_function(d) || colors.fallback;
+        })
+        .on("mouseover", function(d) {
+            if (d.country == "US") {
+              tooltip.html(`
+                  <div>Age: <b>${d.age}</b></div>
+                  <div>Gender: <b>${d.gender}</b></div>
+                  <div>Average pace: <b>${d.avgPace} min/mi</b></div>
+                  <div>City: <b>${d.city}, ${d.state}</b></div>
+                  <div>Country: <b>${d.country}</b></div>
+              `);
+            }
+            else {
+              tooltip.html(`
+                  <div>Age: <b>${d.age}</b></div>
+                  <div>Gender: <b>${d.gender}</b></div>
+                  <div>Average pace: <b>${d.avgPace} min/mi</b></div>
+                  <div>City: <b>${d.city}</b></div>
+                  <div>Country: <b>${d.country}</b></div>
+              `);
+            }
             tooltip.style("visibility", "visible");
         })
         .on("mousemove", function() {

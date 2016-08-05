@@ -1,8 +1,4 @@
 race,city,state,country,gender,age,avgPace
-Marathon,257 Riviera Drive,CA,US,M,45,9:32
-Marathon,56332 Dieblich,,DE,F,51,11:55
-Marathon,715 Sumac St,WI,US,F,41,12:13
-Marathon,��re,AB,SE,M,43,6:51
 Marathon,Abu Dhabi,,AE,M,35,8:01
 Marathon,Acton,MA,US,M,54,10:19
 Marathon,Adelanto,CA,US,M,47,11:23
@@ -67,7 +63,7 @@ Marathon,Albert Park Victoria,,AU,M,37,9:59
 Marathon,Albuquerque,NM,US,M,26,11:38
 Marathon,Albuquerque,NM,US,M,29,9:38
 Marathon,Albuquerque,NM,US,M,32,9:07
-Marathon,Alcorcon (madrid),,ES,M,43,9:37
+Marathon,Alcorcon (Madrid),,ES,M,43,9:37
 Marathon,Aldaia Valencia,,ES,M,42,10:12
 Marathon,Alexandria,VA,US,F,25,7:34
 Marathon,Alexandria,VA,US,F,38,10:18
@@ -82,7 +78,6 @@ Marathon,Alkmaar,,NL,F,44,11:15
 Marathon,Allen,TX,US,F,49,10:07
 Marathon,Allendale,NJ,US,M,42,7:50
 Marathon,Allentown,PA,US,M,26,9:31
-Marathon,Aller��d,,DK,M,43,9:13
 Marathon,Allston,MA,US,M,38,11:57
 Marathon,Alpharetta,GA,US,F,59,10:08
 Marathon,Alpharetta,GA,US,M,59,10:13
@@ -127,7 +122,6 @@ Marathon,Apo,AP,US,F,53,10:07
 Marathon,Apodaca,N/A,MX,M,37,10:40
 Marathon,Apple Valley,MN,US,M,52,9:54
 Marathon,Appleton,NF,CA,F,52,9:00
-Marathon,Apt 8g,CA,US,M,30,10:55
 Marathon,Aptos,CA,US,M,28,9:19
 Marathon,Aptos,CA,US,F,44,13:38
 Marathon,Aptos,CA,US,M,60,12:22
@@ -161,7 +155,7 @@ Marathon,Arroyo Grande,CA,US,F,44,13:56
 Marathon,Arvada,CO,US,F,23,9:23
 Marathon,Asaka-Shisaitama,,JP,M,24,8:46
 Marathon,Asheville,NC,US,M,34,7:41
-Marathon,Ashford South Australia,,AU,M,47,8:34
+Marathon,Ashford,,AU,M,47,8:34
 Marathon,Ashland,OR,US,M,30,9:46
 Marathon,Astoria,NY,US,F,26,10:04
 Marathon,Astoria,NY,US,M,33,9:43
@@ -190,7 +184,7 @@ Marathon,Atlanta,GA,US,M,43,7:16
 Marathon,Atlanta,GA,US,M,52,12:22
 Marathon,Atlanta,GA,US,M,54,11:09
 Marathon,Atlantis,FL,US,M,31,13:19
-Marathon,Atr̴,,NO,M,40,7:48
+Marathon,Atra,,NO,M,40,7:48
 Marathon,Aubers,,FR,M,53,12:10
 Marathon,Auburn,CA,US,M,46,9:05
 Marathon,Auckland,,GB,M,30,9:20
@@ -222,9 +216,9 @@ Marathon,Austin,TX,US,M,55,11:07
 Marathon,Austin,MN,US,M,57,14:58
 Marathon,Azusa,CA,US,F,29,13:49
 Marathon,Azusa,CA,US,M,44,12:05
-Marathon,B�_rums Verk,CA,NO,F,43,8:24
+Marathon,Baerums Verk,CA,NO,F,43,8:24
 Marathon,Bad Oldesloe,,DE,M,42,8:56
-Marathon,Bad Soden Salm�_nster,,DE,M,52,9:13
+Marathon,Bad Soden-Salmunster,,DE,M,52,9:13
 Marathon,Bahama,NC,US,M,42,8:35
 Marathon,Bakersfield,CA,US,F,25,13:24
 Marathon,Bakersfield,CA,US,M,27,12:57
@@ -445,8 +439,8 @@ Marathon,Birmingham,AL,US,M,69,8:54
 Marathon,Black Rock,,AU,M,55,10:16
 Marathon,Bloomington,MN,US,M,28,9:09
 Marathon,Bluffdale,UT,US,F,36,11:42
-Marathon,Boca Del R�_o,,MX,M,38,9:40
-Marathon,Boca Del Rio,N/A,MX,M,45,9:18
+Marathon,Boca Del Rio,,MX,M,38,9:40
+Marathon,Boca Del Rio,,MX,M,45,9:18
 Ultramarathon (2nd Leg),Boca Raton,FL,US,M,32,13:05
 Marathon,Boca Raton,FL,US,M,61,9:48
 Marathon,Boca Raton,FL,US,M,61,15:01
@@ -456,7 +450,7 @@ Marathon,Bogota,CA,CO,M,41,10:27
 Marathon,Boise,ID,US,M,20,7:20
 Marathon,Boise,ID,US,F,24,8:14
 Marathon,Bologna,,IT,M,47,10:27
-Marathon,Bondi Beach Sydney Nsw,,AU,M,36,9:35
+Marathon,"Bondi Beach, Sydney",,AU,M,36,9:35
 Marathon,Borex,,CH,M,53,10:02
 Marathon,Bossier City,CA,US,F,35,11:26
 Marathon,Bossier City,LA,US,M,36,11:26
@@ -730,7 +724,7 @@ Marathon,Chennai,,IN,M,31,11:18
 Marathon,Chesterfield,,GB,M,29,8:21
 Marathon,Chevy Chase,MD,US,F,47,8:57
 Marathon,Chiba City,,JP,M,61,10:52
-Marathon,Chiba-Ken,,JP,F,32,11:23
+Marathon,Chiba Prefecture,,JP,F,32,11:23
 Marathon,Chicago,IL,US,M,24,10:35
 Marathon,Chicago,IL,US,F,24,11:25
 Marathon,Chicago,IL,US,M,25,8:55
@@ -772,7 +766,7 @@ Marathon,Chico,CA,US,M,39,13:37
 Marathon,Chico,CA,US,F,54,13:19
 Marathon,Chico,CA,US,M,58,11:14
 Marathon,Chico,CA,US,M,63,10:49
-Marathon,Chico Ca,CA,US,F,26,10:50
+Marathon,Chico,CA,US,F,26,10:50
 Marathon,Chicopee,MA,US,F,28,12:18
 Marathon,Chihuahua,N/A,MX,M,34,9:35
 Marathon,Chihuahua,,MX,M,38,10:24
@@ -805,7 +799,7 @@ Marathon,Cincinnati,OH,US,M,59,11:57
 Marathon,Citrus Heights,CA,US,M,41,14:25
 Marathon,Ciudad De Guatemala,,GT,M,35,12:46
 Marathon,Ciudad De Guatemala,,GT,M,37,11:02
-Marathon,Ciudad De M̩xico,N/A,MX,F,32,12:21
+Marathon,Mexico City,N/A,MX,F,32,12:21
 Marathon,Ciudad De Mexico,CA,MX,M,38,11:38
 Marathon,Ciudad De Mexico,,MX,M,44,11:38
 Marathon,Ciudad Del Carmen,,MX,M,38,8:47
@@ -904,7 +898,7 @@ Marathon,Costa Mesa,CA,US,M,61,9:55
 Marathon,Costa Rica,,CR,F,31,9:58
 Marathon,Costa Rica,CA,CR,F,32,12:12
 Marathon,Costa Rica,,CR,F,57,8:58
-Marathon,Costabissara VI,N/A,IT,M,44,10:22
+Marathon,Costabissara,N/A,IT,M,44,10:22
 Marathon,Cotati,CA,US,M,66,14:04
 Marathon,Cottonwood Heights,UT,US,M,26,12:39
 Marathon,Courttenay,BC,CA,F,62,9:31
@@ -917,7 +911,7 @@ Marathon,Croissy Sur Seine,,FR,M,48,10:59
 Marathon,Crystal Lake,IL,US,M,52,9:14
 Marathon,Cuajimalpa,,MX,M,43,9:22
 Marathon,Cudahy,CA,US,M,35,9:49
-Marathon,Culiac��n,,MX,M,42,10:17
+Marathon,Culiacan,,MX,M,42,10:17
 Marathon,Culiacan,,MX,M,35,10:43
 Marathon,Culver City,CA,US,F,25,9:05
 Marathon,Culver City,CA,US,F,26,9:35
@@ -987,7 +981,7 @@ Marathon,Cypress,TX,US,M,20,13:01
 Marathon,Cypress,CA,US,F,34,13:19
 Marathon,Cypress,CA,US,M,35,13:08
 Marathon,Cypress,TX,US,M,59,10:17
-Marathon,D�_sseldorf,,DE,M,46,10:54
+Marathon,Dusseldorf,,DE,M,46,10:54
 Marathon,Dahmker,,DE,M,46,10:42
 Marathon,Dallas,TX,US,F,26,9:15
 Marathon,Dallas,TX,US,F,27,14:53
@@ -1047,7 +1041,7 @@ Marathon,Dana Point,CA,US,M,48,10:19
 Marathon,Danbury,CT,US,F,20,10:42
 Marathon,Danbury,CT,US,M,59,10:18
 Marathon,Daniel Island,SC,US,M,31,9:52
-Marathon,Danvile,CA,US,M,23,11:21
+Marathon,Danville,CA,US,M,23,11:21
 Marathon,Danville,CA,US,F,20,10:02
 Marathon,Danville,CA,US,M,20,10:11
 Marathon,Danville,CA,US,F,21,10:53
@@ -1130,7 +1124,6 @@ Marathon,Denver,CO,US,F,39,10:20
 Marathon,Denver,CO,US,M,39,10:43
 Marathon,Denver,CO,US,M,44,7:47
 Marathon,Denver,CO,US,M,45,11:40
-Marathon,Dept 3070,CA,US,M,27,9:20
 Marathon,Deptford,NJ,US,F,34,10:24
 Marathon,Derbyshire,,GB,M,65,8:31
 Marathon,Des Moines,IA,US,F,38,10:17
@@ -1138,7 +1131,7 @@ Marathon,Des Plaines,IL,US,M,43,12:43
 Marathon,Des Plaines,IL,US,M,53,8:52
 Marathon,Desoto,TX,US,M,47,8:45
 Marathon,Destin,FL,DE,M,54,8:27
-Marathon,Df,,MX,M,37,8:52
+Marathon,Mexico City,,MX,M,37,8:52
 Marathon,Diamond Bar,CA,US,F,18,9:05
 Marathon,Diamond Bar,CA,US,M,27,14:27
 Marathon,Diamond Bar,CA,US,F,37,10:08
@@ -1191,8 +1184,8 @@ Marathon,Dublin,CA,US,M,50,10:32
 Marathon,Dublin,CA,US,M,50,11:49
 Marathon,Dublin,,IE,M,51,8:38
 Marathon,Dublin,CA,US,M,52,10:30
-Marathon,Dublin 14,,IE,M,36,8:29
-Marathon,Dublin 14,,IE,M,39,9:08
+Marathon,Dublin,,IE,M,36,8:29
+Marathon,Dublin,,IE,M,39,9:08
 Marathon,Dulles,VA,US,M,45,9:04
 Marathon,Duluth,MN,US,M,54,9:27
 Marathon,Duluth,MN,US,F,67,11:35
@@ -1273,7 +1266,7 @@ Marathon,Ellerau,,DE,M,35,9:42
 Marathon,Elmhurst,NY,US,M,31,11:47
 Marathon,Emerald Hills,CA,US,M,54,10:46
 Marathon,Emerald Hills,CA,US,M,55,9:17
-Marathon,Emeraldhills,CA,US,M,31,9:10
+Marathon,Emerald Hills,CA,US,M,31,9:10
 Marathon,Emeryville,CA,US,M,22,8:10
 Marathon,Emeryville,CA,US,F,31,11:27
 Marathon,Emeryville,CA,US,F,31,12:20
@@ -1302,7 +1295,7 @@ Marathon,Escondido,CA,US,F,46,13:50
 Marathon,Escondido,CA,US,M,53,11:35
 Marathon,Esher,,GB,M,45,8:06
 Marathon,Estacada,OR,US,M,67,14:42
-Marathon,Estado De M̬xico,,MX,F,27,11:34
+Marathon,Mexico State,,MX,F,27,11:34
 Marathon,Eugene,OR,US,M,20,9:54
 Marathon,Eugene,OR,US,F,25,10:33
 Marathon,Eureka,CA,US,F,19,13:00
@@ -1410,12 +1403,12 @@ Marathon,Fpo,AP,US,F,36,8:59
 Marathon,Fpo,AP,US,M,45,9:42
 Marathon,Frankfort,IL,US,F,20,10:08
 Marathon,Frankfurt,,DE,M,49,8:29
-Marathon,Frankfurt Am Main,,DE,M,35,11:59
+Marathon,Frankfurt,,DE,M,35,11:59
 Marathon,Fredericia,,DK,M,53,8:08
 Marathon,Fredericia,,DK,F,54,8:29
 Marathon,Fredericksburg,VA,US,F,34,11:33
 Marathon,Fredericksburg,VA,US,M,47,12:23
-Marathon,Fredricksburg,VA,US,M,37,12:55
+Marathon,Fredericksburg,VA,US,M,37,12:55
 Marathon,Freeman,SD,US,F,34,7:36
 Marathon,Freiburg,,DE,F,53,13:16
 Marathon,Fremont,CA,US,F,15,12:04
@@ -1536,8 +1529,8 @@ Marathon,Frisco,TX,US,M,45,10:46
 Marathon,Frisco,TX,US,M,51,8:39
 Marathon,Frisco,TX,US,M,54,11:23
 Marathon,Frome,N/A,GB,M,65,7:23
-Marathon,Ft Collins,CO,US,M,35,12:14
-Marathon,Fu Zhou,,CN,M,51,12:16
+Marathon,Fort Collins,CO,US,M,35,12:14
+Marathon,Fuzhou,,CN,M,51,12:16
 Marathon,Fukaya,,JP,F,24,12:34
 Marathon,Fullerton,CA,US,M,24,8:32
 Marathon,Fullerton,CA,US,M,24,11:00
@@ -1546,8 +1539,8 @@ Marathon,Fullerton,CA,US,F,37,17:10
 Marathon,Fulton,MO,US,F,31,14:21
 Marathon,Fulton,MD,US,F,36,12:52
 Marathon,Fuzhou,,CN,F,49,13:36
-Marathon,G�_tersloh,,DE,M,22,11:10
-Marathon,G�_tersloh,,DE,M,23,9:38
+Marathon,Gutersloh,,DE,M,22,11:10
+Marathon,Gutersloh,,DE,M,23,9:38
 Marathon,Gainesville,FL,US,F,26,10:00
 Marathon,Gainesville,FL,US,M,63,10:26
 Marathon,Gaithersburg,MD,US,M,31,9:01
@@ -1620,10 +1613,10 @@ Marathon,Greenbrae,CA,US,M,76,10:08
 Marathon,Greensboro,NC,US,M,51,8:19
 Marathon,Gresham,OR,US,F,42,13:00
 Marathon,Grosse Pointe Woods,MI,US,F,25,13:13
-Marathon,Grrenbrae,CA,US,M,42,8:33
+Marathon,Greenbrae,CA,US,M,42,8:33
 Marathon,Guadalajara,,MX,M,37,10:50
 Marathon,Guadalajara,,MX,M,48,9:26
-Marathon,Guadalupenl,,MX,M,64,14:00
+Marathon,Guadalupe,,MX,M,64,14:00
 Marathon,Gualala,CA,US,M,54,9:54
 Marathon,Guangzhou,,CN,F,47,11:02
 Marathon,Guatemala,,GT,M,23,11:07
@@ -1751,7 +1744,7 @@ Marathon,Hong Kong,,HK,F,17,10:31
 Marathon,Hong Kong,,HK,M,35,11:06
 Marathon,Hong Kong,,HK,M,41,10:11
 Marathon,Hong Kong,,HK,M,45,7:01
-Marathon,Hongkong,,HK,M,47,11:04
+Marathon,Hong Kong,,HK,M,47,11:04
 Marathon,Honolulu,HI,US,F,35,10:18
 Marathon,Honolulu,HI,US,F,35,11:33
 Marathon,Honolulu,HI,US,M,37,10:18
@@ -1810,7 +1803,7 @@ Marathon,Huntington Beach,CA,US,M,56,10:20
 Marathon,Huntington Beach,CA,US,M,57,11:49
 Marathon,Huntington Beach,CA,US,M,59,7:31
 Marathon,Huntington Park,CA,US,M,27,13:25
-Marathon,Huntinton Beach,CA,US,F,30,13:42
+Marathon,Huntington Beach,CA,US,F,30,13:42
 Marathon,Idaho Falls,ID,US,F,38,7:43
 Marathon,Idaho Falls,ID,US,F,64,12:36
 Marathon,Igny,N/A,FR,F,40,11:35
@@ -1824,7 +1817,7 @@ Marathon,Inglewood,CA,US,F,39,13:24
 Marathon,Inglewood,CA,US,F,50,15:40
 Marathon,Iowa City,IA,US,M,29,9:24
 Marathon,Iowa City,IA,US,M,61,8:11
-Marathon,Irivne,CA,US,M,46,12:09
+Marathon,Irvine,CA,US,M,46,12:09
 Marathon,Irvine,CA,US,F,20,11:57
 Marathon,Irvine,CA,US,F,23,9:29
 Marathon,Irvine,CA,US,M,23,12:45
@@ -1867,7 +1860,7 @@ Marathon,Jersey City,NJ,US,F,38,9:55
 Marathon,Jiang Su,,CN,M,42,10:29
 Marathon,Jockgrim,,DE,F,44,12:27
 Marathon,Johannesburg,,ZA,M,36,10:03
-Marathon,Joinville - Le- Pont,,FR,F,34,10:29
+Marathon,Joinville-le-Pont,,FR,F,34,10:29
 Marathon,Juarez,,MX,F,24,10:53
 Marathon,Juncos,PR,US,M,39,8:55
 Marathon,Juncos,PR,US,M,50,8:50
@@ -1923,10 +1916,10 @@ Marathon,Kottgeisering,N/A,DE,M,58,9:51
 Marathon,Kowloon,CA,HK,M,44,11:39
 Marathon,Kowloon,,HK,M,48,9:44
 Marathon,Kuki,,JP,M,23,6:19
-Marathon,La,CA,US,M,36,11:11
-Marathon,La,CA,US,F,37,11:58
-Marathon,La,CA,US,M,43,9:45
-Marathon,La,CA,US,M,49,10:12
+Marathon,Los Angeles,CA,US,M,36,11:11
+Marathon,Los Angeles,CA,US,F,37,11:58
+Marathon,Los Angeles,CA,US,M,43,9:45
+Marathon,Los Angeles,CA,US,M,49,10:12
 Marathon,La Barca,,MX,M,33,10:43
 Marathon,La Crescenta,CA,US,M,27,10:58
 Marathon,La Crescenta,CA,US,M,52,11:56
@@ -1944,8 +1937,8 @@ Marathon,La Puente,CA,US,M,64,13:47
 Marathon,La Puente,CA,US,M,67,13:58
 Marathon,La Tour De Peilz,,CH,M,40,8:30
 Marathon,La Verme,CA,US,F,24,12:16
-Marathon,L̩on,,MX,F,38,10:38
-Marathon,L̩on,,MX,F,42,10:11
+Marathon,Leon,,MX,F,38,10:38
+Marathon,Leon,,MX,F,42,10:11
 Marathon,Lacrescenta,CA,US,F,45,10:19
 Marathon,Lafayette,CA,US,M,16,8:58
 Marathon,Lafayette,CA,US,F,19,9:25
@@ -2030,7 +2023,7 @@ Marathon,Lexington,KY,US,M,37,9:59
 Marathon,Lexington,KY,US,F,43,11:01
 Marathon,Lexington,KY,US,F,47,11:01
 Marathon,Lilydale,N/A,AU,M,32,7:34
-Marathon,Lilydale Vic,,AU,F,32,6:58
+Marathon,Lilydale,,AU,F,32,6:58
 Marathon,Lima,,PE,M,31,6:19
 Marathon,Lima,,PE,F,35,8:40
 Marathon,Lima,CA,PE,M,47,8:47
@@ -2281,15 +2274,15 @@ Marathon,Los Angeles,CA,US,M,58,14:40
 Marathon,Los Angeles,CA,US,M,60,14:24
 Marathon,Los Angeles,CA,US,M,69,12:31
 Marathon,Los Angeles,CA,US,M,72,15:21
-Marathon,Los ́ngeles,CA,US,M,46,8:52
-Marathon,Los Banks,CA,US,M,34,9:16
+Marathon,Los Angeles,CA,US,M,46,8:52
+Marathon,Los Banos,CA,US,M,34,9:16
 Marathon,Los Banos,CA,US,F,29,10:24
 Marathon,Los Banos,CA,US,M,30,13:37
 Marathon,Los Banos,CA,US,F,32,10:36
 Marathon,Los Banos,CA,US,F,35,12:20
 Marathon,Los Banos,CA,US,F,42,10:21
 Marathon,Los Cabos,N/A,MX,F,47,17:21
-Marathon,Los Gastos,CA,US,F,27,11:45
+Marathon,Los Gatos,CA,US,F,27,11:45
 Marathon,Los Gatos,CA,US,M,19,8:05
 Marathon,Los Gatos,CA,US,M,23,6:48
 Marathon,Los Gatos,CA,US,F,23,9:58
@@ -2320,9 +2313,9 @@ Marathon,Louisville,KY,US,M,54,15:01
 Marathon,Loveland,CO,US,M,35,7:57
 Marathon,Lubbock,TX,US,F,33,8:37
 Marathon,Lubbock,TX,US,M,48,8:08
-Marathon,Luchou New Taipei City,N/A,TW,M,48,12:25
+Marathon,New Taipei City,N/A,TW,M,48,12:25
 Marathon,Ludlow,MA,US,F,35,12:18
-Marathon,Lule̴,N/A,SE,M,39,11:11
+Marathon,Lulea,N/A,SE,M,39,11:11
 Marathon,Luton,,GB,M,30,10:05
 Marathon,Lynchburg,VA,US,M,27,15:21
 Marathon,Lynwood,CA,US,M,20,13:29
@@ -2330,12 +2323,12 @@ Marathon,Lynwood,CA,US,F,29,13:58
 Marathon,Lynwood,CA,US,M,36,14:57
 Marathon,Lyon,,FR,M,29,9:03
 Marathon,Lyon,N/A,FR,M,46,8:16
-Marathon,M̩xico,CA,MX,F,19,9:26
-Marathon,M̩xico,,MX,F,31,10:30
-Marathon,M̩xico,,MX,M,32,12:20
-Marathon,M̩xico City,,MX,F,46,11:35
-Marathon,M�_nchen,,DE,F,48,11:16
-Marathon,M�_nchen,,DE,F,49,11:04
+Marathon,Mexico,CA,MX,F,19,9:26
+Marathon,Mexico,,MX,F,31,10:30
+Marathon,Mexico,,MX,M,32,12:20
+Marathon,Mexico City,,MX,F,46,11:35
+Marathon,Munich,,DE,F,48,11:16
+Marathon,Munich,,DE,F,49,11:04
 Marathon,Machida Citytokyo,,JP,M,34,6:49
 Marathon,Madera,CA,US,M,65,11:58
 Marathon,Madison,WI,US,F,21,12:32
@@ -2368,7 +2361,7 @@ Marathon,Mansfield,MA,US,M,22,7:53
 Marathon,Manteca,CA,US,M,26,9:48
 Marathon,Manteca,CA,US,M,40,10:25
 Marathon,Manteca,CA,US,F,43,11:39
-Marathon,Mantiou Springs,CO,US,F,28,12:54
+Marathon,Manitou Springs,CO,US,F,28,12:54
 Marathon,Mantua,OH,US,M,37,10:10
 Marathon,Mantua,NJ,US,M,48,8:52
 Marathon,Mar Del Plata,CA,AR,M,40,8:37
@@ -2406,8 +2399,8 @@ Marathon,McKinney,TX,US,F,52,12:39
 Marathon,McLean,VA,US,M,45,9:18
 Marathon,McLean,VA,US,M,47,10:42
 Marathon,McMinnville,OR,US,M,37,7:59
-Marathon,Medell�_n,CA,CO,F,37,11:36
-Marathon,Medell�_n,CA,CO,M,53,8:11
+Marathon,Medellin,CA,CO,F,37,11:36
+Marathon,Medellin,CA,CO,M,53,8:11
 Marathon,Medford,OR,US,M,20,7:17
 Marathon,Medford,MA,US,M,21,11:27
 Marathon,Medford,OR,US,M,43,7:17
@@ -2489,7 +2482,7 @@ Marathon,Mexico City,,MX,M,37,10:03
 Marathon,Mexico City,N/A,MX,F,41,9:39
 Marathon,Mexico City,,MX,M,58,9:42
 Marathon,Mexico City,,MX,M,64,13:57
-Ultramarathon (2nd Leg),Mexico Distrito Federal,,MX,M,62,16:26
+Ultramarathon (2nd Leg),Mexico City,,MX,M,62,16:26
 Marathon,Miami,FL,US,M,29,12:16
 Marathon,Miami,FL,US,M,36,10:56
 Marathon,Miami,FL,US,F,38,14:42
@@ -2595,7 +2588,7 @@ Marathon,Modesto,CA,US,M,43,8:16
 Marathon,Modesto,CA,US,F,53,13:31
 Marathon,Monroe,WA,US,F,26,11:25
 Marathon,Monroe,WA,US,F,53,11:12
-Marathon,Monroe,NJ,US,M,53,14:17
+Marathon,Monroe Township,NJ,US,M,53,14:17
 Marathon,Monroe,WA,US,M,54,12:52
 Marathon,Monroe Township,NJ,US,M,25,7:10
 Marathon,Monroeville,PA,US,M,34,9:20
@@ -2725,7 +2718,7 @@ Marathon,Mountain View,CA,US,M,51,15:06
 Marathon,Mountain View,CA,US,F,55,11:41
 Marathon,Mountain View,CA,US,F,58,11:16
 Marathon,Mountain View,CA,US,M,81,10:26
-Marathon,Mt Pleasant,SC,US,F,23,10:25
+Marathon,Mount Pleasant,SC,US,F,23,10:25
 Marathon,Munich,N/A,DE,M,22,9:39
 Marathon,Munich,,DE,M,23,9:45
 Marathon,Munich,,DE,M,46,12:04
@@ -2773,7 +2766,7 @@ Marathon,New Roads,LA,US,M,40,9:19
 Marathon,New Rochelle,NY,US,F,23,9:54
 Marathon,New Rochelle,NY,US,M,50,9:24
 Marathon,New Taipei City,,TW,M,43,13:02
-Marathon,New Taipei County,,TW,F,33,11:13
+Marathon,New Taipei City,,TW,F,33,11:13
 Marathon,New York,NY,US,F,19,10:56
 Marathon,New York,NY,US,M,20,8:20
 Marathon,New York,NY,US,M,21,11:04
@@ -2830,7 +2823,7 @@ Marathon,New York,NY,US,F,53,12:59
 Marathon,New York,NY,US,M,54,11:09
 Marathon,New York,NY,US,F,55,16:18
 Marathon,New York,NY,US,F,61,9:00
-Marathon,New York City,NY,US,F,26,10:17
+Marathon,New York,NY,US,F,26,10:17
 Marathon,Newark,CA,US,F,21,9:50
 Marathon,Newark,CA,US,M,25,11:18
 Marathon,Newark,CA,US,M,26,19:19
@@ -2848,7 +2841,7 @@ Marathon,Newbury Park,CA,US,F,35,11:31
 Marathon,Newbury Park,CA,US,M,54,11:25
 Marathon,Newcastle,CA,US,F,33,10:31
 Marathon,Newcastle,CA,US,F,39,13:59
-Marathon,Newcastle Upon Tyne,,GB,M,27,8:34
+Marathon,Newcastle upon Tyne,,GB,M,27,8:34
 Marathon,Newhall,CA,US,F,22,13:43
 Marathon,Newman,CA,US,M,32,9:10
 Marathon,Newmarket,,NZ,M,47,8:23
@@ -2877,7 +2870,7 @@ Marathon,Norman,OK,US,M,52,9:57
 Marathon,North Adelaide,,AU,M,19,12:24
 Marathon,North Hills,CA,US,M,28,11:16
 Marathon,North Hills,CA,US,F,42,13:49
-Marathon,North Hollywod,CA,US,M,23,9:43
+Marathon,North Hollywood,CA,US,M,23,9:43
 Marathon,North Hollywood,CA,US,M,28,14:18
 Marathon,North Hollywood,CA,US,F,31,14:17
 Marathon,North Hollywood,CA,US,F,37,12:13
@@ -2886,7 +2879,7 @@ Marathon,North Hollywood,CA,US,M,41,10:44
 Marathon,North Hollywood,CA,US,M,41,12:43
 Marathon,North Hollywood,CA,US,F,45,10:02
 Marathon,North Hollywood,CA,US,F,45,11:07
-Marathon,North Hpllywood,CA,US,M,45,12:06
+Marathon,North Hollywood,CA,US,M,45,12:06
 Marathon,North Kingstown,RI,US,M,21,8:19
 Marathon,North Las Vegas,NV,US,F,47,12:26
 Marathon,North Reading,MA,US,M,15,10:56
@@ -2901,7 +2894,7 @@ Marathon,Northridge,CA,US,M,55,12:17
 Marathon,Northridge,CA,US,M,56,14:52
 Marathon,Norwalk,CA,US,F,42,11:03
 Marathon,Norwood,MA,US,M,40,10:53
-Marathon,Nottinghamshire Uk,,GB,F,43,11:27
+Marathon,Nottinghamshire,,GB,F,43,11:27
 Marathon,Novato,CA,US,M,22,9:09
 Marathon,Novato,CA,US,F,25,14:14
 Marathon,Novato,CA,US,M,27,9:48
@@ -2910,8 +2903,8 @@ Marathon,Novato,CA,US,M,35,8:49
 Marathon,Novato,CA,US,M,39,10:48
 Marathon,Novato,CA,US,F,57,9:55
 Marathon,Novato,CA,US,M,57,10:41
-Marathon,Nyc,NY,US,F,25,12:01
-Marathon,Nyc,NY,US,M,29,10:58
+Marathon,New York,NY,US,F,25,12:01
+Marathon,New York,NY,US,M,29,10:58
 Marathon,Oak Park,IL,US,M,29,9:47
 Marathon,Oak Park,IL,US,F,41,8:48
 Marathon,Oakdale,CA,US,F,27,12:10
@@ -3103,7 +3096,7 @@ Marathon,Overland Park,KS,US,F,23,8:59
 Marathon,Overland Park,KS,US,F,26,8:59
 Marathon,Owensboro,KY,US,M,27,10:59
 Marathon,Oxford,,GB,M,42,6:30
-Marathon,Oxford Falls Nsw Australia,N/A,AU,M,46,8:56
+Marathon,Oxford Falls,N/A,AU,M,46,8:56
 Marathon,Oxnard,CA,US,M,27,12:04
 Marathon,Oxnard,CA,US,F,28,11:48
 Marathon,Oxnard,CA,US,F,28,13:02
@@ -3210,7 +3203,7 @@ Marathon,Palo Alto,CA,US,M,60,10:19
 Marathon,Palo Alto,CA,US,M,61,9:05
 Marathon,Palo Alto,CA,US,M,63,8:51
 Marathon,Panama City,,PA,M,36,7:14
-Marathon,Panorama Cit,CA,US,M,34,10:54
+Marathon,Panorama City,CA,US,M,34,10:54
 Marathon,Panorama City,CA,US,M,39,12:46
 Marathon,Panorama City,CA,US,M,49,12:51
 Marathon,Panorama City,CA,US,M,54,12:13
@@ -3256,7 +3249,7 @@ Marathon,Pearland,TX,US,M,42,9:00
 Marathon,Pearland,TX,US,M,46,11:10
 Marathon,Pebble Beach,CA,US,M,38,8:17
 Marathon,Pebble Beach,CA,US,M,68,9:51
-Marathon,Peking,,CN,M,30,13:14
+Marathon,Beijing,,CN,M,30,13:14
 Marathon,Pembroke Pines,FL,US,F,51,10:11
 Marathon,Pennsauken,NJ,US,M,57,10:25
 Marathon,Peoria,IL,US,F,34,12:38
@@ -3403,7 +3396,7 @@ Ultramarathon (2nd Leg),Post Falls,ID,US,M,56,13:34
 Marathon,Poulsbo,WA,US,F,47,11:51
 Marathon,Poway,CA,US,F,31,13:29
 Marathon,Prague,,CZ,M,38,8:34
-Marathon,Praha 8,,CZ,M,25,10:46
+Marathon,Prague,,CZ,M,25,10:46
 Marathon,Prescott Valley,AZ,US,M,56,13:48
 Marathon,Princeton,NJ,US,M,51,8:34
 Marathon,Provo,UT,US,F,39,11:44
@@ -3420,17 +3413,17 @@ Marathon,Puyallup,WA,US,M,21,7:36
 Marathon,Puyallup,WA,US,M,41,11:21
 Marathon,Puyallup,WA,US,F,42,7:42
 Marathon,Puyallup,WA,US,M,51,8:24
-Marathon,Qingdao,,CN,M,26,10:01
+Marathon,Qingdao Shangdong,,CN,M,26,10:01
 Marathon,Qingdao Shangdong,,CN,F,46,10:40
 Marathon,Qingdao Shangdong,,CN,M,47,10:40
-Marathon,Qu̩bec,QC,CA,M,24,7:25
+Marathon,Quebec,QC,CA,M,24,7:25
 Marathon,Quartz Hill,CA,US,F,50,8:48
 Marathon,Queen Creek,AZ,US,F,39,12:37
 Marathon,Queen Creek,AZ,US,M,47,14:04
 Marathon,Queen Creek,AZ,US,M,69,13:27
 Marathon,Queens,NY,US,M,41,7:14
 Marathon,Queens Village,NY,US,F,41,8:52
-Marathon,Quer̩taro,,MX,M,43,12:38
+Marathon,Queretaro,,MX,M,43,12:38
 Marathon,Queretaro,,MX,M,34,8:57
 Marathon,Queretaro,,MX,M,45,11:28
 Marathon,Quezon City,,PH,M,45,12:10
@@ -3462,7 +3455,7 @@ Marathon,Red Bluff,CA,US,M,28,14:23
 Marathon,Red Bluff,CA,US,M,53,12:47
 Marathon,Red Wing,MN,US,M,68,11:43
 Marathon,Redding,CA,US,M,39,8:50
-Marathon,Reddwood City,CA,US,M,50,14:18
+Marathon,Redwood City,CA,US,M,50,14:18
 Marathon,Redlands,CA,US,F,33,15:46
 Marathon,Redlands,CA,US,F,37,11:29
 Marathon,Redlands,CA,US,F,38,14:03
@@ -3513,7 +3506,7 @@ Marathon,Redwood City,CA,US,M,58,12:20
 Marathon,Redwood City,CA,US,M,59,10:57
 Marathon,Redwood Valley,CA,US,M,21,9:00
 Marathon,Redwood Valley,CA,US,M,55,14:18
-Marathon,Redwood Vly,CA,US,M,30,9:40
+Marathon,Redwood Valley,CA,US,M,30,9:40
 Marathon,Reichershausen,,DE,F,32,9:07
 Marathon,Reifnitz,,AT,M,48,9:42
 Marathon,Reno,NV,US,M,17,10:17
@@ -3581,7 +3574,7 @@ Marathon,Riverside,CA,US,F,34,11:45
 Marathon,Riverside,CA,US,M,43,10:34
 Marathon,Riverside,CA,US,M,46,13:13
 Marathon,Riverside,CA,US,M,54,12:18
-Marathon,Rncho Pls Vr,CA,US,M,37,13:24
+Marathon,Rancho Palos Verdes,CA,US,M,37,13:24
 Marathon,Rochester,NH,US,M,26,9:18
 Marathon,Rochester Hills,MI,US,M,22,8:37
 Marathon,Rochester Hills,MI,US,M,37,13:25
@@ -3594,7 +3587,7 @@ Marathon,Rocklin,CA,US,F,46,9:54
 Marathon,Rocklin,CA,US,F,49,11:08
 Marathon,Rocklin,CA,US,M,52,11:05
 Marathon,Rocklin,CA,US,M,54,10:08
-Marathon,Rocklin Ca,CA,US,M,34,8:49
+Marathon,Rocklin,CA,US,M,34,8:49
 Marathon,Rockville,MD,US,F,32,8:09
 Marathon,Rockville,MD,US,M,52,13:26
 Marathon,Rockville Centre,NY,US,M,63,14:44
@@ -3638,7 +3631,7 @@ Marathon,Roxbury Crossing,MA,US,M,28,9:00
 Marathon,Royal Oak,MI,US,F,33,10:44
 Marathon,Rueil Malmaison,,FR,M,53,9:33
 Marathon,S El Monte,CA,US,M,36,10:08
-Marathon,Șdra Sunderbyn,,SE,M,40,10:34
+Marathon,Sodra�Sunderbyn,,SE,M,40,10:34
 Marathon,Sacramento,CA,US,F,18,9:31
 Marathon,Sacramento,CA,US,M,19,12:43
 Marathon,Sacramento,CA,US,M,20,9:59
@@ -3702,7 +3695,7 @@ Marathon,Saint Helena,CA,US,M,45,9:00
 Marathon,Saint Helena,CA,US,M,47,7:38
 Marathon,Saint Paul,MN,US,M,38,9:54
 Marathon,Saint-Desert,,FX,M,33,9:11
-Marathon,Sainz Helena,CA,US,M,46,8:02
+Marathon,Saint Helena,CA,US,M,46,8:02
 Marathon,Saitama,,JP,M,44,12:58
 Marathon,Saitama,,JP,M,50,12:19
 Marathon,Salem,NH,US,F,26,10:37
@@ -3725,9 +3718,9 @@ Marathon,Salt Lake City,UT,US,F,34,10:55
 Marathon,Salt Lake City,UT,US,F,35,8:25
 Marathon,Salt Lake City,UT,US,M,42,10:34
 Marathon,Saltillo,CA,MX,F,32,12:51
-Marathon,Saltsj̦baden,CA,SE,M,20,12:31
-Marathon,Saltsj̦baden,CA,SE,F,48,12:31
-Marathon,Sam Francisco,CA,US,M,23,11:40
+Marathon,Saltsjobaden,CA,SE,M,20,12:31
+Marathon,Saltsjobaden,CA,SE,F,48,12:31
+Marathon,San Francisco,CA,US,M,23,11:40
 Marathon,San Anselmo,CA,US,M,50,9:28
 Marathon,San Antonio,TX,US,M,24,11:19
 Marathon,San Antonio,TX,US,F,36,8:54
@@ -3819,8 +3812,8 @@ Marathon,San Diego,CA,US,F,53,10:21
 Marathon,San Diego,CA,US,M,58,11:29
 Marathon,San Diego,CA,US,M,63,10:55
 Marathon,San Fernando,CA,US,F,29,20:05
-Marathon,San Franccisco,CA,US,F,52,11:16
-Marathon,San Franchisco,CA,US,F,26,11:12
+Marathon,San Francisco,CA,US,F,52,11:16
+Marathon,San Francisco,CA,US,F,26,11:12
 Marathon,San Francisco,CA,US,F,27,11:14
 Marathon,San Francisco,CA,US,M,36,11:25
 Marathon,San Francisco,CA,US,M,47,11:40
@@ -4997,11 +4990,11 @@ Marathon,San Francisco,CA,US,F,68,13:59
 Marathon,San Francisco,CA,US,M,69,13:36
 Marathon,San Francisco,CA,US,F,70,11:13
 Marathon,San Francisco,CA,US,M,75,14:05
-Marathon,San Francsico,CA,US,M,26,9:04
-Marathon,San Francsico,CA,US,M,32,11:14
-Marathon,San Francsico,CA,US,M,43,10:51
-Marathon,San Franscisco,CA,US,M,23,9:57
-Marathon,San Fransisco,CA,US,M,35,11:06
+Marathon,San Francisco,CA,US,M,26,9:04
+Marathon,San Francisco,CA,US,M,32,11:14
+Marathon,San Francisco,CA,US,M,43,10:51
+Marathon,San Francisco,CA,US,M,23,9:57
+Marathon,San Francisco,CA,US,M,35,11:06
 Marathon,San Gabriel,CA,US,M,24,16:50
 Marathon,San Gabriel,CA,US,F,41,11:54
 Marathon,San Gabriel,CA,US,M,52,11:42
@@ -5295,12 +5288,12 @@ Marathon,San Jose,CA,US,M,57,11:25
 Marathon,San Jose,CA,US,M,60,10:35
 Marathon,San Jose,CA,US,F,62,10:37
 Marathon,San Jose,CA,US,M,66,11:21
-Marathon,San Jose Ca,CA,US,F,39,16:13
-Marathon,San Jose Costa Rica,,CR,F,49,9:07
+Marathon,San Jose,CA,US,F,39,16:13
+Marathon,San Jose,,CR,F,49,9:07
 Marathon,San Jose Del Cabo,,MX,F,44,12:30
 Marathon,San Jose Del Cabo,,MX,F,53,12:44
-Marathon,San Jose Del Cabo Bcs,,MX,M,36,10:45
-Marathon,San Jose Del Cabo Bcs,,MX,F,38,12:33
+Marathon,San Jose Del Cabo,,MX,M,36,10:45
+Marathon,San Jose Del Cabo,,MX,F,38,12:33
 Marathon,San Juan,PR,US,M,39,10:47
 Marathon,San Juan Capistrano,CA,US,M,51,12:01
 Marathon,San Leandro,CA,US,M,24,9:52
@@ -5409,7 +5402,7 @@ Marathon,San Rafael,CA,US,F,49,9:19
 Marathon,San Rafael,CA,US,F,49,10:20
 Marathon,San Rafael,CA,US,M,52,10:20
 Marathon,San Rafael,CA,US,M,57,12:08
-Marathon,San Rafel,CA,US,M,36,13:15
+Marathon,San Rafael,CA,US,M,36,13:15
 Marathon,San Ramon,CA,US,F,22,9:07
 Marathon,San Ramon,CA,US,M,23,11:18
 Marathon,San Ramon,CA,US,M,27,10:32
@@ -5468,7 +5461,7 @@ Marathon,Santa Ana,CA,US,F,53,11:56
 Marathon,Santa Ana,CA,US,F,53,12:39
 Marathon,Santa Ana,CA,US,F,56,12:08
 Marathon,Santa Ana,CA,US,M,59,9:07
-Marathon,Santa Babrara,N/A,CR,M,49,9:09
+Marathon,Santa Barbara,N/A,CR,M,49,9:09
 Marathon,Santa Barbara,CA,US,M,19,6:58
 Marathon,Santa Barbara,CA,US,M,24,12:15
 Marathon,Santa Barbara,CA,US,M,25,10:11
@@ -5586,9 +5579,9 @@ Marathon,Santa Rosa,CA,US,M,57,10:59
 Marathon,Santa Tecla,,SV,M,37,9:46
 Marathon,Santee,CA,US,M,35,8:33
 Marathon,Santiago,CA,CL,M,59,8:17
-Marathon,Santiago De Queretaro Queretaro,,MX,M,55,11:13
+Marathon,Queretaro,,MX,M,55,11:13
 Marathon,Sapporo,,JP,M,34,10:28
-Marathon,Sappro,,JP,F,39,12:57
+Marathon,Sapporo,,JP,F,39,12:57
 Marathon,Sarasota,FL,US,M,25,8:45
 Marathon,Saratoga,CA,US,F,20,9:55
 Marathon,Saratoga,CA,US,F,20,10:06
@@ -5695,13 +5688,13 @@ Marathon,Shanghai,,CN,M,46,9:06
 Marathon,Shawano,WI,US,M,34,13:27
 Marathon,Shelburne,VT,US,F,45,10:52
 Marathon,Shelby Township,MI,US,M,21,10:18
-Marathon,Shelby Twp,MI,US,M,46,7:53
-Marathon,Shen Zhen,,CN,F,39,11:17
-Marathon,Shen Zhen,,CN,M,51,11:47
-Marathon,Shenzhen,,CN,M,40,10:30
-Marathon,Shenzhen,,CN,M,42,11:04
-Marathon,Shenzhen,,CN,M,43,10:08
-Marathon,Shenzhen,,CN,F,44,12:53
+Marathon,Shelby Township,MI,US,M,46,7:53
+Marathon,Shenzhen Guangdong,,CN,F,39,11:17
+Marathon,Shenzhen Guangdong,,CN,M,51,11:47
+Marathon,Shenzhen Guangdong,,CN,M,40,10:30
+Marathon,Shenzhen Guangdong,,CN,M,42,11:04
+Marathon,Shenzhen Guangdong,,CN,M,43,10:08
+Marathon,Shenzhen Guangdong,,CN,F,44,12:53
 Marathon,Shenzhen Guangdong,,CN,M,48,12:08
 Marathon,Shenzhen Guangdong,,CN,F,52,14:13
 Marathon,Sherbrooke,,CA,F,35,10:04
@@ -5775,7 +5768,7 @@ Marathon,South Pasadena,CA,US,M,47,10:41
 Marathon,South Pasadena,CA,US,M,55,11:57
 Marathon,South Pasadena,CA,US,F,63,14:13
 Marathon,South Royalton,VT,US,F,27,12:18
-Marathon,South San Feancisco,CA,US,M,41,14:29
+Marathon,South San Francisco,CA,US,M,41,14:29
 Marathon,South San Francisco,CA,US,F,25,8:54
 Marathon,South San Francisco,CA,US,M,25,11:15
 Marathon,South San Francisco,CA,US,M,26,10:41
@@ -5801,7 +5794,7 @@ Marathon,South San Francisco,CA,US,M,48,13:03
 Marathon,South San Francisco,CA,US,M,51,14:15
 Marathon,South San Francisco,CA,US,M,52,13:05
 Marathon,South San Francisco,CA,US,F,52,16:17
-Marathon,South Sf,CA,US,F,43,10:59
+Marathon,South San Francisco,CA,US,F,43,10:59
 Ultramarathon (2nd Leg),South Windsor,CT,US,M,26,10:49
 Marathon,Sparks,NV,US,M,35,12:47
 Marathon,Sparks,NV,US,M,43,7:27
@@ -5827,7 +5820,7 @@ Marathon,St Paul,MN,US,F,33,11:35
 Marathon,St Paul,MN,US,M,34,8:28
 Marathon,St Paul,MN,US,M,50,10:15
 Marathon,St Petersburg,FL,US,F,37,10:47
-Marathon,St-Charles-Borrom̩e,QC,CA,M,41,8:30
+Marathon,St-Charles-Borromee,QC,CA,M,41,8:30
 Marathon,St-Lazarre,QC,CA,M,33,9:53
 Marathon,St-Paul-De-Montminy,QC,CA,M,72,10:41
 Marathon,Stafford,TX,US,M,34,11:44
@@ -6045,8 +6038,8 @@ Marathon,Tokyo,,JP,M,48,9:12
 Marathon,Tokyo,,JP,M,48,9:45
 Marathon,Tokyo,N/A,JP,M,51,11:19
 Marathon,Tokyo,,JP,M,59,12:13
-Marathon,Tokyo Nerima Ward,,JP,F,41,13:47
-Marathon,Tokyo Nerima Ward,,JP,M,46,13:47
+Marathon,Tokyo,,JP,F,41,13:47
+Marathon,Tokyo,,JP,M,46,13:47
 Marathon,Toluca,,MX,M,25,12:41
 Marathon,Toluca,,MX,M,28,10:11
 Marathon,Toluca,,MX,M,30,8:59
@@ -6098,7 +6091,7 @@ Marathon,Truckee,CA,US,M,32,9:57
 Marathon,Truckee,CA,US,F,37,11:02
 Marathon,Truckee,CA,CO,F,37,13:44
 Marathon,Truckee,CA,US,F,46,11:16
-Marathon,Tst,,HK,F,45,12:43
+Marathon,Tsim Sha Tsui,,HK,F,45,12:43
 Marathon,Tsukuba,,JP,M,51,8:57
 Marathon,Ttokyo,CA,JP,F,33,14:52
 Marathon,Tucson,AZ,US,M,23,8:38
@@ -6216,7 +6209,7 @@ Marathon,Vancouver,BC,CA,M,34,8:49
 Marathon,Vancouver,,CA,M,42,9:42
 Marathon,Vancouver,BC,CA,M,46,10:24
 Marathon,Vancouver,WA,US,M,55,8:19
-Marathon,Vannuys,CA,US,F,32,12:59
+Marathon,Van Nuys,CA,US,F,32,12:59
 Marathon,Veendam,N/A,NL,M,51,9:11
 Marathon,Venice,CA,US,M,33,8:56
 Marathon,Venice,CA,US,M,35,9:25
@@ -6372,7 +6365,7 @@ Marathon,Wexford,,IE,F,32,8:26
 Marathon,Wheaton,IL,US,M,20,12:01
 Marathon,Wheaton,MD,US,M,50,11:02
 Marathon,White Plains,NY,US,M,28,7:47
-Marathon,White River Jct,VT,US,M,29,10:35
+Marathon,White River Junction,VT,US,M,29,10:35
 Marathon,Whitestone,NY,US,M,28,9:55
 Marathon,Whitewater,CA,US,M,42,14:04
 Marathon,Whittier,CA,US,M,36,13:25
@@ -6423,10 +6416,10 @@ Marathon,Yantai Shandong,,CN,M,27,11:26
 Marathon,Yokohama,,JP,F,27,12:34
 Marathon,Yokohama,,JP,M,54,14:46
 Marathon,Yokohama,,JP,M,61,9:35
-Marathon,Yokohama City,,JP,M,45,6:46
-Marathon,Yokohama City,,JP,M,54,14:49
-Marathon,Yokohama-She Kanagawa,N/A,JP,M,43,9:24
-Marathon,Yokohama-Shi Kanagawa,,JP,M,43,13:37
+Marathon,Yokohama,,JP,M,45,6:46
+Marathon,Yokohama,,JP,M,54,14:49
+Marathon,Yokohama,N/A,JP,M,43,9:24
+Marathon,Yokohama,,JP,M,43,13:37
 Marathon,Yonkers,NY,US,F,29,7:21
 Marathon,Yorba Linda,CA,US,M,16,12:26
 Marathon,Yorba Linda,CA,US,F,19,11:52
@@ -6447,9 +6440,13 @@ Marathon,Zapopan,,MX,M,46,10:38
 Marathon,Zapopan,,MX,F,46,14:34
 Marathon,Zapopan,,MX,M,48,11:36
 Marathon,Zhenjiang,,CN,M,34,10:17
-Marathon,Zhongshan Guangdong Province,,CN,M,59,8:38
+Marathon,Zhongshan Guangdong,,CN,M,59,8:38
 Marathon,Zurich,,CH,M,34,8:08
-Marathon,,,,F,24,10:00
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
 ,,,,,,
 ,,,,,,
 ,,,,,,
