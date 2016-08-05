@@ -211,8 +211,6 @@ footer {
 // heading styles ---------------------------------------
 
 .title-container {
-  background-image: url("./assets/photos/1.jpg");
-
   &.top-margin {
     margin-top: 3.5em;
   }
@@ -266,6 +264,7 @@ footer {
 .specialhead-top {
   color: @gray-blue;
   font-family: @banner;
+  vertical-align: 4px;
   font-size: 18px;
   text-transform: uppercase;
   @media @mobile {
@@ -330,7 +329,7 @@ footer {
   margin: 0 0 0 10px;
   img {
     opacity: 1;
-    height: 20px;
+    width: 20px;
   }
 }
 
@@ -402,9 +401,10 @@ header {
 }
 
 .background-img {
+    background-image: url("./assets/photos/1.jpg");
     height: 800px;
     background-size: cover;
-    background-position: center center;
+    background-position: 63% bottom;
     position: relative;
     display: block;
     z-index: 1;
