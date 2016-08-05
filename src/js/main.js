@@ -1171,10 +1171,41 @@ function bubblechart_slope(group) {
         .style("fill","#3F3F3F")
         .style("font-size","10px")
         .style("font-style","italic")
-        // .attr("transform", "rotate(-90)")
+        .attr("style","writing-mode: tb; glyph-orientation-vertical: 0")
+        // .attr("transform","scale(-1,1)")
         // .attr("transform", function(d) {"translate("+xSlope(d.slope)/2+","+xSlope(d.slope)/2+") rotate(90)"})
         .text(function(d) {
-            return d.Segment;
+            if (d.Segment == "Lincoln Downhill" || 
+                d.Segment == "GGP Downhill" || 
+                d.Segment == "Fisherman's Wharf" ||
+                d.Segment == "Lincoln Hill" ||
+                d.Segment == "Crissy Field") {
+                return d.Segment;
+            }
+            else {
+                return "";
+            }
+        })
+        .attr("transform", function(d) {
+            if (d.Category == "Slowest") {
+              return "translate(8,10)";
+            }
+            else {
+              if (d.Segment == "Lincoln Downhill") {
+                return "translate(8,-105)";
+              } 
+              else if (d.Segment == "GGP Downhill") {
+                return "translate(8,-90)";
+              } 
+              else if (d.Segment == "Fisherman's Wharf") {
+                return "translate(8,-120)";
+              }
+              else if (d.Segment == "Lincoln Hill") {
+                return "translate(8,-73)";
+              }
+              else if (d.Segment == "Crissy Field") {
+                return "translate(8,-75)";              }
+            }
         });
   } else {
     nodeslope.append("text")
