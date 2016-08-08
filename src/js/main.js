@@ -961,6 +961,7 @@ function bubblechart_slope(group) {
   var plotData = plotBubbleData.filter(function(d) { return d.Category == group });
 
   d3.select("#elevation-bubble-graph").select("svg").remove();
+  var tooltip_slope = document.querySelector(".tooltip_slope");
 
   // setting sizes of interactive
   var margin = {
@@ -985,6 +986,32 @@ function bubblechart_slope(group) {
     var width = 315 - margin.left - margin.right;
     var height = 350 - margin.top - margin.bottom;
   }
+
+  var showTooltip = function(d, target) {
+    if (!looping) {
+      // tooltip info
+      tooltip_slope.classList.add("show");
+      tooltip_slope.innerHTML = `
+        <div>Segment: ${d.Segment}</div>
+        <div>Grade: ${d.Grade}%</div>
+        <div>Speed: ${d.Speed} min/mi</div>
+      `;
+      if (screen.width <= 480) {
+        $(".tooltip_slope").css("top", (d3.event.pageY+40)+"px")
+        $(".tooltip_slope").css("left",(d3.event.pageX/2)+10+"px");
+      } else {
+        $(".tooltip_slope").css("top", (d3.event.pageY+20)+"px")
+        $(".tooltip_slope").css("left",(d3.event.pageX-80)+"px");
+      }
+    }
+  }
+
+  var hideTooltip = function(d, target) {
+    if (!looping) {
+      tooltip_slope.classList.remove("show");
+    }
+  }
+
 
   if (screen.width <= 480) {
 
@@ -1137,7 +1164,13 @@ function bubblechart_slope(group) {
         .style("fill", function(d) {
           return color_stravabubbles(d) || colors.fallback;
         })
-        .append("text")
+        .on("mouseenter", function(d) {
+          showTooltip(d, this);
+        })
+        .on("mouseleave", function(d) {
+          hideTooltip(d, this);
+          tooltip_slope.classList.remove("show");
+        });
   } else {
     svgSlope.selectAll(".dot")
         .data(plotData)
@@ -1151,7 +1184,13 @@ function bubblechart_slope(group) {
         .style("fill", function(d) {
           return color_stravabubbles(d) || colors.fallback;
         })
-        .append("text")
+        .on("mouseenter", function(d) {
+          showTooltip(d, this);
+        })
+        .on("mouseleave", function(d) {
+          hideTooltip(d, this);
+          tooltip_slope.classList.remove("show");
+        });
   }
 
   var nodeslope = svgSlope.selectAll(".circle")
@@ -1160,56 +1199,92 @@ function bubblechart_slope(group) {
       .attr("class","node");
 
   if (screen.width <= 480) {
-    nodeslope.append("text")
-        .attr("x", function(d) {
-          return xSlope(d.slope);
-        })
-        .attr("y", function(d) {
-          return ySlope(d.pace)
-        })
-        .attr("class","dottextslope vertical")
-        .style("fill","#3F3F3F")
-        .style("font-size","10px")
-        .style("font-style","italic")
-        // .attr("style","-webkit-writing-mode: vertical-lr; -ms-writing-mode: tb-lr; writing-mode: vertical-lr; text-orientation: sideways; -webkit-text-orientation: sideways; glyph-orientation-vertical: 0")
-        // .attr("transform","translate(10,10) rotate(90deg)")
-         .attr("style","writing-mode: tb; glyph-orientation-vertical: 0")
-        // .attr("style","writing-mode: vertical-rl; glyph-orientation-vertical: 0")
-        // .attr("transform","scale(-1,1)")
-        // .attr("transform", function(d) {"translate("+xSlope(d.slope)/2+","+xSlope(d.slope)/2+") rotate(90)"})
-        .text(function(d) {
-            if (d.Segment == "Lincoln Downhill" ||
-                d.Segment == "GGP Downhill" ||
-                d.Segment == "Fisherman's Wharf" ||
-                d.Segment == "Lincoln Hill" ||
-                d.Segment == "Crissy Field") {
-                return d.Segment;
+    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    if (iOS) {
+      nodeslope.append("text")
+          .attr("x", function(d) {
+            return xSlope(d.slope)-40;
+          })
+          .attr("y", function(d) {
+            // return ySlope(d.pace);
+            if (d.Segment == "Crissy Field") {
+              return ySlope(d.pace)-10;
+            } else if (d.Segment == "Lincoln Hill"){
+              return ySlope(d.pace)-5;
+            } else if (d.Segment == "GGP Downhill"){
+              return ySlope(d.pace);
+            } else {
+              return ySlope(d.pace);
             }
-            else {
-                return "";
-            }
-        })
-        .attr("transform", function(d) {
-            if (d.Category == "Slowest") {
-              return "translate(8,10)";
-            }
-            else {
-              if (d.Segment == "Lincoln Downhill") {
-                return "translate(8,-105)";
+          })
+          .attr("class","dottextslope")
+          .style("fill","#3F3F3F")
+          .style("font-size","10px")
+          .style("font-style","italic")
+          .text(function(d) {
+              if (d.Segment == "Lincoln Downhill" ||
+                  d.Segment == "GGP Downhill" ||
+                  d.Segment == "Lincoln Hill" ||
+                  d.Segment == "Crissy Field") {
+                  return d.Segment;
               }
-              else if (d.Segment == "GGP Downhill") {
-                return "translate(8,-90)";
+              else {
+                  return "";
               }
-              else if (d.Segment == "Fisherman's Wharf") {
-                return "translate(8,-120)";
+          });
+
+    } else {
+      nodeslope.append("text")
+          .attr("x", function(d) {
+            return xSlope(d.slope);
+          })
+          .attr("y", function(d) {
+            return ySlope(d.pace)
+          })
+          .attr("class","dottextslope vertical")
+          .style("fill","#3F3F3F")
+          .style("font-size","10px")
+          .style("font-style","italic")
+          // .attr("style","-webkit-writing-mode: vertical-lr; -ms-writing-mode: tb-lr; writing-mode: vertical-lr; text-orientation: sideways; -webkit-text-orientation: sideways; glyph-orientation-vertical: 0")
+          // .attr("transform","translate(10,10) rotate(90deg)")
+           .attr("style","writing-mode: tb; glyph-orientation-vertical: 0")
+          // .attr("style","writing-mode: vertical-rl; glyph-orientation-vertical: 0")
+          // .attr("transform","scale(-1,1)")
+          // .attr("transform", function(d) {"translate("+xSlope(d.slope)/2+","+xSlope(d.slope)/2+") rotate(90)"})
+          .text(function(d) {
+              if (d.Segment == "Lincoln Downhill" ||
+                  d.Segment == "GGP Downhill" ||
+                  d.Segment == "Fisherman's Wharf" ||
+                  d.Segment == "Lincoln Hill" ||
+                  d.Segment == "Crissy Field") {
+                  return d.Segment;
               }
-              else if (d.Segment == "Lincoln Hill") {
-                return "translate(8,-73)";
+              else {
+                  return "";
               }
-              else if (d.Segment == "Crissy Field") {
-                return "translate(8,-75)";              }
-            }
-        });
+          })
+          .attr("transform", function(d) {
+              if (d.Category == "Slowest") {
+                return "translate(8,10)";
+              }
+              else {
+                if (d.Segment == "Lincoln Downhill") {
+                  return "translate(8,-105)";
+                }
+                else if (d.Segment == "GGP Downhill") {
+                  return "translate(8,-90)";
+                }
+                else if (d.Segment == "Fisherman's Wharf") {
+                  return "translate(8,-120)";
+                }
+                else if (d.Segment == "Lincoln Hill") {
+                  return "translate(8,-73)";
+                }
+                else if (d.Segment == "Crissy Field") {
+                  return "translate(8,-75)";              }
+              }
+          });
+    }
   } else {
     nodeslope.append("text")
         .attr("x", function(d) {
@@ -1232,7 +1307,7 @@ function bubblechart_slope(group) {
         .style("font-style","italic")
         .text(function(d) {
             return d.Segment;
-        });
+        })
   }
 }
 

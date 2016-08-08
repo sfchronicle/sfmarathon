@@ -657,13 +657,21 @@ text {
   stroke: none;
 }
 
-.tooltip, .bar_tooltip {
+.tooltip, .bar_tooltip, .tooltip_slope {
   font-size: 14px;
   font-family: @block-graphics;
   padding: 10px;
   border-radius: 3px;
   background: lighten(@light-gray,20%);
   border: 1px @dark-gray solid;
+}
+
+.tooltip_slope {
+  display: none;
+  &.show {
+    display: block;
+    position: absolute;
+  }
 }
 
 @bars: #4D769D;
