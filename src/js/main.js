@@ -120,8 +120,8 @@ if (screen.width <= 480) {
 } else {
   var xbarsoffset = -10;
   var ybarsoffset = 60;
-  var xbarsoffsetleft = -60;
-  var dybarsoffsetleft = -70;
+  var xbarsoffsetleft = -10;
+  var dybarsoffsetleft = -60;
 }
 
 // x-axis scale
@@ -217,7 +217,7 @@ svgbars.append("text")
     .attr("dy", dybarsoffsetleft)
     .attr("x", xbarsoffsetleft)
     .attr("transform", "rotate(-90)")
-    .text("Count");
+    .text("Number of runners");
 
 svgbars.append("g")
     .attr("class", "x axis")
@@ -347,7 +347,7 @@ svgbars.append("g")
     .attr("x", xbarsoffset)
     .attr("dy", ".71em")
     .style("text-anchor", "end")
-    .text("Pace per mile")
+    .text("Pace per mile (min/mi)")
 
 svgbars.append("g")
     .attr("class", "x axis")
@@ -384,7 +384,7 @@ if (screen.width > 768) {
     bottom: 40,
     left: 40
   };
-  var width = 310 - margin.left - margin.right;
+  var width = 315 - margin.left - margin.right;
   var height = 350 - margin.top - margin.bottom;
 }
 
@@ -518,7 +518,7 @@ voronoiGroupMilePace.selectAll(".voronoiMilePace")
 function mouseoverMilePace(d) {
   d3.select("."+d.key).classed("line-hover", true);
   focusMilePace.attr("transform", "translate(" + xMilePace(d.mile) + "," + yMilePace(d.pace) + ")");
-  focusMilePace.select("text").text("Mile "+d.mile+", "+d.paceText+ " per mi");
+  focusMilePace.select("text").text("Mile "+d.mile+", "+d.paceText+ " per mile");
 }
 
 function mouseoutMilePace(d) {
@@ -562,7 +562,7 @@ if (screen.width <= 480) {
       .attr("dy", ".71em")
       .style("text-anchor", "end")
       // .style("fill","white")
-      .text("Pace per mile")
+      .text("Pace per mile (min/mi)")
 
   svgMilePace.append("g")
     .attr("class", "y axis")
@@ -589,7 +589,7 @@ if (screen.width <= 480) {
       .attr("dy", ".71em")
       .style("text-anchor", "end")
       // .style("fill","white")
-      .text("Pace per mile")
+      .text("Pace per mile (min/mi)")
 
   svgMilePace.append("g")
     .attr("class", "y axis")
@@ -630,7 +630,7 @@ if (screen.width > 768) {
     bottom: 40,
     left: 45
   };
-  var width = 310 - margin.left - margin.right;
+  var width = 315 - margin.left - margin.right;
   var height = 350 - margin.top - margin.bottom;
 }
 
@@ -812,7 +812,7 @@ if (screen.width <= 480) {
       .attr("dy", ".71em")
       .style("text-anchor", "end")
       // .style("fill","white")
-      .text("Pace per mile")
+      .text("Pace per mile (min/mi)")
   svgTimingLines.append("g")
     .attr("class", "y axis")
     .call(yAxisRightAllStrava)
@@ -832,12 +832,12 @@ if (screen.width <= 480) {
       .append("text")
       .attr("class", "label")
       .attr("transform", "rotate(-90)")
-      .attr("y", -90)
+      .attr("y", -80)
       .attr("x", -10)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
       // .style("fill","white")
-      .text("Pace per mile")
+      .text("Pace per mile (min/mi)")
   svgTimingLines.append("g")
     .attr("class", "y axis")
     .call(yAxisRightAllStrava)
@@ -982,7 +982,7 @@ function bubblechart_slope(group) {
       bottom: 40,
       left: 45
     };
-    var width = 310 - margin.left - margin.right;
+    var width = 315 - margin.left - margin.right;
     var height = 350 - margin.top - margin.bottom;
   }
 
@@ -1078,7 +1078,7 @@ function bubblechart_slope(group) {
           .attr("y", 10)
           .attr("dy", ".71em")
           .style("text-anchor", "end")
-          .text("Pace per mile")
+          .text("Pace per mile (min/mi)")
 
   } else {
     svgSlope.append("g")
@@ -1098,7 +1098,7 @@ function bubblechart_slope(group) {
         .attr("x", width-10)
         .attr("y", -10)
         .style("text-anchor", "end")
-        .text("Pace per mile");
+        .text("Pace per mile (min/mi)");
 
     svgSlope.append("g")
         .attr("class", "y axis")
@@ -1167,10 +1167,12 @@ function bubblechart_slope(group) {
         .attr("y", function(d) {
           return ySlope(d.pace)
         })
-        .attr("class","dottextslope")
+        .attr("class","dottextslope vertical")
         .style("fill","#3F3F3F")
         .style("font-size","10px")
         .style("font-style","italic")
+        // .attr("style","writing-mode: vertical-rl; -webkit-writing-mode: vertical-rl; glyph-orientation-vertical: 0")
+        // .attr("transform","translate(10,10) rotate(90deg)")
         .attr("style","writing-mode: vertical-rl; glyph-orientation-vertical: 0")
         // .attr("transform","scale(-1,1)")
         // .attr("transform", function(d) {"translate("+xSlope(d.slope)/2+","+xSlope(d.slope)/2+") rotate(90)"})
@@ -1378,7 +1380,7 @@ function bubblechart() {
       bottom: 40,
       left: 45
     };
-    var width = 310 - margin.left - margin.right;
+    var width = 315 - margin.left - margin.right;
     var height = 350 - margin.top - margin.bottom;
     var bubble_rad = 2;
   }
@@ -1430,7 +1432,7 @@ function bubblechart() {
       .attr("y", 20)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Pace per mile")
+      .text("Pace per mile (min/mi)")
 
   if (plot_flag == "gender") {
     // color in the dots

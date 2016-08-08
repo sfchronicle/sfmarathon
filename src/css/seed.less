@@ -129,31 +129,25 @@ li {
   @media @tablet {
     padding: 10px;
   }
-  @media @tablet {
-    padding: 5px;
-  }
 }
 .outer {
   max-width: 900px;
   margin: 60px auto;
   @media @tablet {
-    margin: 20px;
+    margin: 40px;
   }
   @media @mobile {
-    margin: 10px;
+    margin: 30px auto;
   }
 }
 .source, .credit {
   clear: left;
-  padding-top: 10px;
+  padding-top: 5px;
   font-size: 12px;
   text-align: left;
   // color: @white;
   font-style: italic;
   font-family: @block-graphics;
-  @media @tablet {
-    padding: 10px 20px;
-  }
   @media @mobile {
     padding: 10px;
   }
@@ -161,7 +155,7 @@ li {
     padding-bottom: 40px;
   }
   &.top {
-    padding-bottom: 0px;
+    padding-top: 10px;
   }
 }
 
@@ -566,9 +560,9 @@ header {
 svg {
   display: block;
   margin: auto;
-  @media @mobile {
-    margin: 0;
-  }
+  // @media @mobile {
+  //   margin: 0;
+  // }
 }
 text {
   font-size: 14px;
@@ -941,25 +935,33 @@ text {
 }
 
 #map {
-  width: 43.5%;
-  float: left;
-  margin: 0 auto;
+  width: 650px;
+  // width: 80%;
+  // float: left;
+  // margin: 0 auto;
 
   @media @tablet {
     width: 80%;
     clear: both;
     float: none;
   }
+  @media @mobile {
+    width: 95%;
+  }
 }
 
 #table {
-  width: 56.5%;
-  float: left;
-  margin: 0 auto;
+  width: 650px;
+  // width: 56.5%;
+  // float: left;
+  // margin: 0 auto;
 
   @media @tablet {
     width: 80%;
     clear: both;
     float: none;
+  }
+  @media @mobile {
+    width: 95%;
   }
 }
