@@ -1171,7 +1171,7 @@ function bubblechart_slope(group) {
         .style("fill","#3F3F3F")
         .style("font-size","10px")
         .style("font-style","italic")
-        .attr("style","writing-mode: vertical-lr; -webkit-writing-mode: vertical-lr; -ms-writing-mode: tb-lr; glyph-orientation-vertical: 0")
+        .attr("style","writing-mode: vertical-lr; -webkit-writing-mode: vertical-lr; -ms-writing-mode: tb-lr; text-orientation: sideways; -webkit-text-orientation: sideways; glyph-orientation-vertical: 0")
         // .attr("transform","translate(10,10) rotate(90deg)")
         // .attr("style","writing-mode: vertical-rl; glyph-orientation-vertical: 0")
         // .attr("transform","scale(-1,1)")
