@@ -1,6 +1,6 @@
 {
   "title": "SF Marathon: Running the numbers",
-  "description": "The Chronicle analyzed data from the official results for more than 6,300 finishers, plus the individual runs of nearly 900 people who uploaded the details of their GPS-tracked races to Strava.",
+  "description": "The Chronicle analyzed data from the official results for more than 8,000 registered racers, plus the individual runs of nearly 900 people who uploaded the details of their GPS-tracked races to Strava.",
   "author":"Erin Allday, Emma O'Neill",
   "date":"2016-09-22",
   "url": "http://projects.sfchronicle.com/2016/",
@@ -8,7 +8,7 @@
   "twitter_text":"Running the numbers: Dive deep into %23SFMarathon data in this special report.",
   "hashtag":"",
   "tags": [],
-  "image": "assets/photos/1.jpg",
+  "image": "assets/photos/3.jpg",
   "sheets": [],
   "production": false,
   "embedded": true
