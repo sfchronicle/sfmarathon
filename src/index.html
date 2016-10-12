@@ -3,10 +3,16 @@
   <head>
     <title><%= json.project.title %></title>
     <meta charset="utf-8">
+    <meta name="__sync_contentCategory" content="meterA">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="app.js" async></script>
     <%= t.include("partials/_head.html") %>
+    <!-- Treg & Syncronex -->
+    <script type="text/javascript" src="http://treg.hearstnp.com/treg.js"></script>
+    <script type="text/javascript" src="http://www.sfchronicle.com/js/hdn/omniture/syncronex.js"></script>
+    <script type="text/javascript" src="https://syncaccess-hst-sfc.syncronex.com/hst/sfc/api/scripts/syncwall"></script>
     <%= t.include("partials/_analytics_hearst.html") %>
   </head>
   <script>  var HDN = HDN || {}  </script>
@@ -267,7 +273,6 @@
 
     <%= t.include("partials/_footer.html") %>
 
-    <script src="app.js" async></script>
     <%= t.include("partials/_helloSFC.html") %>
 
   </body>
